@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Licensed Materials - Property of IBM 5725-I43 (C) Copyright IBM Corp. 
+	2011, 2013. All Rights Reserved. US Government Users Restricted Rights - 
+	Use, duplication or disclosure restricted by GSA ADP Schedule Contract with 
+	IBM Corp. --><ns2:adapter xmlns:ns2="http://www.ibm.com/mfp/integration" name="userProfile" platformVersion="7.1.0.00.20181026-1701">
+    <displayName>userProfile</displayName>
+    <description>userProfile</description>
+    <connectivity>
+        <connectionPolicy xmlns:ns4="http://www.ibm.com/mfp/integration/sql" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:SQLConnectionPolicy">
+            <dataSourceJNDIName>smartgov/jdbc/CommonShellDS</dataSourceJNDIName>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getUserProfile" scope="wl_unprotected"/>
+    <procedure name="getUserInfo" scope="wl_unprotected"/>
+    <procedure name="setUserInfo" scope="wl_unprotected"/>
+    <procedure name="setUserInfoForPortal" scope="wl_unprotected"/>
+    <procedure name="setUserInfoForProfile" scope="wl_unprotected"/>
+    <procedure name="setUserMobile" scope="wl_unprotected"/>
+    <procedure name="setUserMail" scope="wl_unprotected"/>
+    <procedure name="deleteUserInfo" scope="servicesTest"/>
+    <procedure name="getUserNotifications" scope="servicesTest"/>
+    <procedure name="updateUserNotifications" scope="servicesTest"/>
+    <procedure name="setUserNotificationReadFlag" scope="servicesTest"/>
+    <procedure name="setUserNotification" scope="wl_unprotected"/>
+    <procedure name="deleteUserNotification" scope="servicesTest"/>
+    <procedure name="deleteUserNotifications" scope="servicesTest"/>
+    <procedure name="getUserWidgets" scope="servicesTest"/>
+    <procedure name="setUserWidget" scope="servicesTest"/>
+    <procedure name="deleteUserWidget" scope="servicesTest"/>
+    <procedure name="deleteUserWidgets" scope="servicesTest"/>
+    <procedure name="getUserFavoriteServices" scope="servicesTest"/>
+    <procedure name="setUserFavoriteService" scope="servicesTest"/>
+    <procedure name="deleteUserFavoriteService" scope="servicesTest"/>
+    <procedure name="deleteUserFavoriteServices" scope="servicesTest"/>
+    <procedure name="updateUserFavoriteServices" scope="servicesTest"/>
+    <procedure name="getUserLatestRecentActivitiesPortal" scope="wl_unprotected"/>
+    <procedure name="getAllRecentActivitiesByDates" scope="servicesTest"/>
+    <procedure name="getAllRecentActivitiesByDate" scope="wl_unprotected"/>
+    <procedure name="getAllNonFinalizedRecentActivitiesByDate" scope="wl_unprotected"/>
+    <procedure name="getRecentActivitiesTotalEPay" scope="servicesTest"/>
+    <procedure name="getRecentActivitiesTotalMPay" scope="servicesTest"/>
+    <procedure name="getRecentActivitiesServiceProviders" scope="servicesTest"/>
+    <procedure name="getRecentActivitiesServiceCodes" scope="servicesTest"/>
+    <procedure name="getRecentActivitiesStatus" scope="servicesTest"/>
+    <procedure name="setUserRecentActivity" scope="wl_unprotected"/>
+    <procedure name="updateUserRecentActivity" scope="wl_unprotected"/>
+    <procedure name="updateUserRecentActivityCheckStep" scope="wl_unprotected"/>
+    <procedure name="updateUserRecentActivityTokenWithStatus" scope="wl_unprotected"/>
+    <procedure name="deleteUserRecentActivity" scope="servicesTest"/>
+    <procedure name="deleteUserRecentActivities" scope="servicesTest"/>
+    <procedure name="getUserOtherAccounts" scope="servicesTest"/>
+    <procedure name="setUserOtherAccount" scope="servicesTest"/>
+    <procedure name="setUserOtherAccountPortal" scope="wl_unprotected"/>
+    <procedure name="deleteUserOtherAccountPortal" scope="wl_unprotected"/>
+    <procedure name="deleteUserOtherAccount" scope="servicesTest"/>
+    <procedure name="deleteUserOtherAccounts" scope="servicesTest"/>
+    <procedure name="getUserNotificationsCoun" scope="servicesTest"/>
+    <procedure name="getUserNotificationsFromTimeStamp" scope="servicesTest"/>
+    <procedure name="getUserNotificationsWithLimit" scope="servicesTest"/>
+    <procedure name="getUserServiceFeedbacks" scope="servicesTest"/>
+    <procedure name="setUserServiceFeedback" scope="wl_unprotected"/>
+    <procedure name="deleteUserServiceFeedback" scope="servicesTest"/>
+    <procedure name="deleteUserServiceFeedbacks" scope="servicesTest"/>
+    <procedure name="getCache" scope="wl_unprotected"/>
+    <procedure name="setCache" scope="wl_unprotected"/>
+    <procedure name="deleteCache" scope="wl_unprotected"/>
+    <procedure name="getStaticPage" scope="wl_unprotected"/>
+    <procedure name="setStaticPage" scope="servicesTest"/>
+    <procedure name="deleteStaticPage" scope="servicesTest"/>
+    <procedure name="reconciliation" scope="wl_unprotected"/>
+    <procedure name="getWCMNEWSBYID" scope="wl_unprotected"/>
+    <procedure name="getWCMNEWSWITHLIMIT" scope="wl_unprotected"/>
+    <procedure name="setWCMNEWS" scope="wl_unprotected"/>
+    <procedure name="getWCMPROJECTSBYID" scope="wl_unprotected"/>
+    <procedure name="getWCMPROJECTSWITHLIMIT" scope="wl_unprotected"/>
+    <procedure name="setWCMPROJECTS" scope="wl_unprotected"/>
+    <procedure name="getWCMANNOUNCEMENTSBYID" scope="wl_unprotected"/>
+    <procedure name="getWCMANNOUNCEMENTSWITHLIMIT" scope="wl_unprotected"/>
+    <procedure name="setWCMANNOUNCEMENTS" scope="wl_unprotected"/>
+    <procedure name="setSalikAccount" scope="wl_unprotected"/>
+    <procedure name="getSalikAccount" scope="wl_unprotected"/>
+    <procedure name="addOTPToDB" scope="wl_unprotected"/>
+    <procedure name="verifyOTP" scope="wl_unprotected"/>
+    <procedure name="isUserVip" scope="servicesTest"/>
+    <procedure name="updateNotifiedVIPUser" scope="wl_unprotected"/>
+    <procedure name="getVIPUser" scope="wl_unprotected"/>
+	
+	
+	
+	<property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="RTA_COMMON_SHELL_PORTAL_ACCOUNT"/>
+	<property name="tokens.portal.vendorPassword"  description="tokens.portal.vendorPassword" defaultValue="dDv7$Q>19TyW*0Im]x^F"/>
+	<property name="tokens.pushToken"  description="tokens.portal.vendorUsername" defaultValue="RTA_COMMON_SHELL_PORTAL_ACCOUNT"/>
+	<property name="tokens.recentActivities"  description="tokens.portal.vendorPassword" defaultValue="dDv7$Q>19TyW*0Im]x^F"/>
+    <property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="RTA3"/>
+    <property name="epay.DSGOptions.SERVCODE"  description="epay.DSGOptions.SERVCODE" defaultValue="mGov"/>
+    <property name="mpay.DSGOptions.SPCODE"  description="mpay.DSGOptions.SPCODE" defaultValue="RTA3"/>
+    <property name="mpay.DSGOptions.SERVCODE"  description="mpay.DSGOptions.SERVCODE" defaultValue="RTAWallet"/>
+	<property name="tokens.jmsAdapter"  description="tokens.jmsAdapter" defaultValue="M)b!le@12345"/>
+
+</ns2:adapter>
+
+<!-- Built by Worklight on machine RTA-CTS-SMS-013.RTA.Global on 2018-11-22 at 12:12:06 -->

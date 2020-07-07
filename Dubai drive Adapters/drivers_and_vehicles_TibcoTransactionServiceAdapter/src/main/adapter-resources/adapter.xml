@@ -1,0 +1,16 @@
+<mfp:adapter name="drivers_and_vehicles_TibcoTransactionServiceAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>drivers_and_vehicles_TibcoTransactionServiceAdapter</displayName>
+    <description>drivers_and_vehicles_TibcoTransactionServiceAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>RTAMHTIBSTGAMX1.rtatestdom.local</domain>
+            <port>11050</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="TransactionTibcoService_operation" />
+    <procedure name="TransactionTibcoService_operationStringRequest" />
+</mfp:adapter>

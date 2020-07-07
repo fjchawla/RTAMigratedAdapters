@@ -1,0 +1,21 @@
+<mfp:adapter name="public_transportation_water_taxi" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>public_transportation_water_taxi</displayName>
+    <description>public_transportation_water_taxi</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>rtamhtibstgamx1.rtatestdom.local</domain>
+            <port>11077</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>10</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="bookWaterTaxi" />
+    <procedure name="confirmBooking" />
+    <procedure name="getBookingInfo" />
+    <procedure name="getFirstAvailableBookingTime" />
+    <procedure name="getTripInfo" />
+    <procedure name="confirmDSGTransaction" />
+    <procedure name="getTransactionAmount" />
+</mfp:adapter>

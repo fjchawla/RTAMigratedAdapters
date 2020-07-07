@@ -1,0 +1,19 @@
+<mfp:adapter name="nfcGoldServiceMessageService" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>nfcGoldServiceMessageService</displayName>
+    <description>nfcGoldServiceMessageService</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>eiptibam2.rta.global</domain>
+            <port>21008</port>
+            <connectionTimeoutInMilliseconds>60000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>5</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="goldServiceMessage" />
+	
+	
+	<property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="tstuser0"/>
+	<property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="May2008"/>
+</mfp:adapter>

@@ -1,0 +1,19 @@
+<mfp:adapter name="public_transportation_pdf_generator_helperAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>public_transportation_pdf_generator_helperAdapter</displayName>
+    <description>public_transportation_pdf_generator_helperAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>http</protocol>
+            <domain>localhost</domain>
+            <port>80</port>
+            <connectionTimeoutInMilliseconds>50000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>50000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>20</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="generatePDFReport" />
+    <procedure name="generateMultiPDFReports" />
+
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
+    <property name="public_transportation_reports_path"  description="public_transportation_reports_path" defaultValue="D:/PTA report"/>
+</mfp:adapter>

@@ -1,0 +1,15 @@
+<ns2:adapter name="HappinessMeterAdapter" platformVersion="7.1.0.00.20161006-0540" xmlns:ns2="http://www.ibm.com/mfp/integration">
+    <displayName>HappinessMeterAdapter</displayName>
+    <description>HappinessMeterAdapter</description>
+    <connectivity>
+        <connectionPolicy xmlns:ns4="http://www.ibm.com/mfp/integration/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:HTTPConnectionPolicyType">
+            <protocol>http</protocol>
+            <domain>rss.cnn.com</domain>
+            <port>80</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>2</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getHappinessMeterParams" />
+</ns2:adapter>

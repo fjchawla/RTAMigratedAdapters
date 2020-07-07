@@ -1,0 +1,30 @@
+<mfp:adapter name="drivers_and_vehicles_transactionsAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>drivers_and_vehicles_transactionsAdapter</displayName>
+    <description>drivers_and_vehicles_transactionsAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>test12c</domain>
+            <port>7783</port>
+            <connectionTimeoutInMilliseconds>180000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>180000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>1000</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getPendingTransactions" />
+    <procedure name="setTransactionData" />
+    <procedure name="TransactionServiceService_operation" />
+    <procedure name="TransactionServiceService_operationStringRequest" />
+    <procedure name="invokeMobilityPaymentLogServiceOperation" />
+    <procedure name="createTransaction" />
+    <procedure name="cancelTransaction" />
+    <procedure name="createOwnershipCertificateTransaction" />
+    <procedure name="createOwnershipCertificateTransactionForMany" />
+    <procedure name="getTransactionStatus" />
+
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
+    <property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="RTA3"/>
+    <property name="epay.DSGOptions.SERVCODE"  description="epay.DSGOptions.SERVCODE" defaultValue="mGov"/>
+    <property name="mpay.DSGOptions.SPCODE"  description="mpay.DSGOptions.SPCODE" defaultValue="RTA3"/>
+    <property name="mpay.DSGOptions.SERVCODE"  description="mpay.DSGOptions.SERVCODE" defaultValue="RTAWallet"/>
+</mfp:adapter>

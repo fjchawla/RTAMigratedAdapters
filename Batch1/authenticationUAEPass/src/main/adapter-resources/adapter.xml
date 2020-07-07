@@ -1,0 +1,22 @@
+<mfp:adapter name="authenticationUAEPass" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>authenticationUAEPass</displayName>
+    <description>authenticationUAEPass</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>EIPTIBAM.RTA.GLOBAL</domain>
+            <port>11079</port>
+            <connectionTimeoutInMilliseconds>180000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>180000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="submitAuthentication" />
+    <procedure name="generateUAEPassURL" />
+    <procedure name="onLogout" />
+	
+	
+	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="Mobstguser"/>
+	<property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="1^p(4q!7jr*8"/>
+	
+</mfp:adapter>

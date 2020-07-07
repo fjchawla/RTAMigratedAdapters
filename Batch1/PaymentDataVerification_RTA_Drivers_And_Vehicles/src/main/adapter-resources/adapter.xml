@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+--><ns2:adapter xmlns:ns2="http://www.ibm.com/mfp/integration" name="PaymentDataVerification_RTA_Drivers_And_Vehicles" platformVersion="6.1.0.01.20140922-2007">
+    <!--This adapter has been upgraded, For more information about the changes, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+    <displayName>PaymentDataVerification_RTA_Drivers_And_Vehicles</displayName>
+    <description>PaymentDataVerification_RTA_Drivers_And_Vehicles</description>
+    <connectivity>
+        <connectionPolicy xmlns:ns4="http://www.ibm.com/mfp/integration/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:HTTPConnectionPolicyType">
+            <protocol>http</protocol>
+            <domain>localhost</domain>
+            <port>80</port>
+        </connectionPolicy>
+        <!--<loadConstraints maxConcurrentConnectionsPerNode="2" /> Element loadConstraint was removed as it is no longer supported. For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+    </connectivity>
+    <procedure name="verifyData" scope="wl_unprotected"/>
+    <procedure name="encryptData"/>
+	
+	<property name="epay.Encryption.STRENGTH"  description="epay.Encryption.STRENGTH" defaultValue="128"/>
+	<property name="epay.Encryption.PASSWORD.RTA"  description="epay.Encryption.PASSWORD.RTA" defaultValue="thi$H@s2b$tr0nG"/>
+	<property name="tokens.recentActivities"  description="tokens.recentActivities" defaultValue="bnZxJfbS"/>
+
+     <property name="epay.Encryption.PASSWORD.RTA_Public_Transport"  description="epay.Encryption.PASSWORD.RTA_Public_Transport" defaultValue="thi$H@s2b$tr0nG"/>
+	<property name="epay.Encryption.PASSWORD.RTA_Corporate_Services"  description="epay.Encryption.PASSWORD.RTA_Corporate_Services" defaultValue="aN0th3rP@s$w0Rd"/>
+	<property name="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue="nIeCtrYBr3cKINg"/>
+	<property name="epay.Encryption.PASSWORD.Smart_Dubai_Parking"  description="epay.Encryption.PASSWORD.Smart_Dubai_Parking" defaultValue="d0NTp1@YwItHm3"/>
+	<property name="epay.Encryption.PASSWORD.RTA_Dubai"  description="epay.Encryption.PASSWORD.RTA_Dubai" defaultValue="gm3mb%$nc6v7|}W"/>
+	
+</ns2:adapter><!-- Built by Worklight on machine shahin on 2015-09-14 at 09:10:10 -->

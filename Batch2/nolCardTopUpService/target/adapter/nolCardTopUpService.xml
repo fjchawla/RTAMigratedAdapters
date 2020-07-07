@@ -1,0 +1,33 @@
+<mfp:adapter name="nolCardTopUpService" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>nolCardTopUpService</displayName>
+    <description>nolCardTopUpService</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>rtamhtibstgamx1.rtatestdom.local</domain>
+            <port>11064</port>
+            <connectionTimeoutInMilliseconds>60000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>60000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>5</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getTopUpAmountOptions" />
+    <procedure name="validateOnlineTopup" />
+    <procedure name="submitTopupRequest" />
+    <procedure name="responseTopupRequest" />
+	
+	
+		
+	<property name="rta.pt.topupRequest.response.startup"  description="rta.pt.topupRequest.response.startup" defaultValue="1"/>
+	<property name="rta.pt.topupRequest.response.multiply"  description="rta.pt.topupRequest.response.multiply" defaultValue="2"/>
+	<property name="rta.pt.topupRequest.response.timeout"  description="rta.pt.topupRequest.response.timeout" defaultValue="10"/>
+	<property name="rta.soap.language.header.xmlns"  description="rta.soap.language.header.xmlns" defaultValue="http://www.rta.ae/ActiveMatrix/ESB/AcceptLanguage/XMLSchema/"/>
+	<property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="tstuser0"/>
+	<property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="May2008"/>
+	<property name="rta.pt.nolCardTopUpService.endPoint"  description="rta.pt.nolCardTopUpService.endPoint" defaultValue="/mobilenolcardtopupservice"/>
+	
+	
+	
+</mfp:adapter>
+
+

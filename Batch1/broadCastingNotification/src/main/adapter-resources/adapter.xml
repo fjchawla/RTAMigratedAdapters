@@ -1,0 +1,20 @@
+<mfp:adapter name="broadCastingNotification" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>broadCastingNotification</displayName>
+    <description>broadCastingNotification</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>developer.ibm.com</domain>
+            <port>443</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="sendBroadcastNotification" scope="wl_unprotected" />
+	
+	
+	<property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="RTA_COMMON_SHELL_PORTAL_ACCOUNT"/>
+	<property name="tokens.portal.vendorPassword"  description="tokens.portal.vendorPassword" defaultValue="dDv7$Q>19TyW*0Im]x^F"/>
+
+</mfp:adapter>

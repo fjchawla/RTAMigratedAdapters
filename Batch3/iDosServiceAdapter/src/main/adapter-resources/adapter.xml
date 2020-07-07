@@ -1,0 +1,20 @@
+<mfp:adapter name="iDosServiceAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>iDosServiceAdapter</displayName>
+    <description>iDosServiceAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>RTAMHTIBSTGAMX1.rtatestdom.local</domain>
+            <port>11079</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>2</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getAllServices" />
+
+    <property name="tokens.jmsAdapter"  description="tokens.jmsAdapter" defaultValue=""/>
+    <property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue=""/>
+    <property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue=""/>
+    
+</mfp:adapter>

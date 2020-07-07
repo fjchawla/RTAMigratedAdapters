@@ -1,0 +1,18 @@
+<mfp:adapter name="CRMAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>CRMAdapter</displayName>
+    <description>CRMAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>rtamhtibstgamx1.rtatestdom.local</domain>
+            <port>11079</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>2</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="reportProblem" />
+    <procedure name="createPhoneCall" />
+    <procedure name="sendFeedback" />
+    <procedure name="createCase" />
+</mfp:adapter>

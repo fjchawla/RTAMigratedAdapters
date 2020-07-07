@@ -1,0 +1,25 @@
+<mfp:adapter name="drivers_and_vehicles_LearnerPermitAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>drivers_and_vehicles_LearnerPermitAdapter</displayName>
+    <description>drivers_and_vehicles_LearnerPermitAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>Eiptibam.RTA.GLOBAL</domain>
+            <port>11080</port>
+            <connectionTimeoutInMilliseconds>60000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>60000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getStudentInfo" />
+    <procedure name="getAttendanceDetails" />
+    <procedure name="getAssessmentDetails" />
+    <procedure name="getHandbookURL" />
+    <procedure name="submitFeedback" />
+
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
+    <property name="publicWorkLightProtocol"  description="publicWorkLightProtocol" defaultValue="http"/>
+	<property name="publicWorkLightHostname"  description="publicWorkLightHostname" defaultValue="localhost"/>
+	<property name="publicWorkLightPort"  description="publicWorkLightPort" defaultValue="10080"/>
+	<property name="publicWorkLightContext"  description="publicWorkLightContext" defaultValue="/worklight"/>
+</mfp:adapter>

@@ -1,0 +1,18 @@
+<mfp:adapter name="corporates_eTraffic_PartnerLegalType" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>corporates_eTraffic_PartnerLegalType</displayName>
+    <description>corporates_eTraffic_PartnerLegalType</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>eiptibam.rta.global</domain>
+            <port>11064</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>200</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getlegalTypeInfo" />
+
+    <property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="Mobstguser"/>
+    <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="1^p(4q!7jr*8"/>
+</mfp:adapter>

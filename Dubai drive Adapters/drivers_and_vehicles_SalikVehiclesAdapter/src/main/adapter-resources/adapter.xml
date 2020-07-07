@@ -1,0 +1,21 @@
+<mfp:adapter name="drivers_and_vehicles_SalikVehiclesAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>drivers_and_vehicles_SalikVehiclesAdapter</displayName>
+    <description>drivers_and_vehicles_SalikVehiclesAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>eiptibam2.rta.global</domain>
+            <port>21023</port>
+            <connectionTimeoutInMilliseconds>60000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>60000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getAllVehicles" />
+    <procedure name="getTFNList" />
+    <procedure name="validatePlateInformation" />
+    <procedure name="AddVehicle" />
+    <procedure name="RemoveVehicle" />
+
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
+</mfp:adapter>

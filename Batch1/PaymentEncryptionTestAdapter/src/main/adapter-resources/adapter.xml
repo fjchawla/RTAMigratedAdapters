@@ -1,0 +1,31 @@
+<mfp:adapter name="PaymentEncryptionTestAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>PaymentEncryptionTestAdapter</displayName>
+    <description>PaymentEncryptionTestAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>http</protocol>
+            <domain>localhost</domain>
+            <port>80</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>2</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="encryptData" />
+	<procedure name="testData" scope="unprotected"/>
+	
+	
+	
+	<property name="epay.Encryption.STRENGTH"  description="epay.Encryption.STRENGTH"  defaultValue="128"/>
+    <property name="epay.Encryption.PASSWORD.RTA_Public_Transport"  description="epay.Encryption.PASSWORD.RTA_Public_Transport" defaultValue="thi$H@s2b$tr0nG"/>
+	<property name="epay.Encryption.PASSWORD.RTA_Corporate_Services"  description="epay.Encryption.PASSWORD.RTA_Corporate_Services" defaultValue="aN0th3rP@s$w0Rd"/>
+	<property name="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue="nIeCtrYBr3cKINg"/>
+	<property name="epay.Encryption.PASSWORD.Smart_Dubai_Parking"  description="epay.Encryption.PASSWORD.Smart_Dubai_Parking" defaultValue="d0NTp1@YwItHm3"/>
+	<property name="epay.Encryption.PASSWORD.RTA_Dubai"  description="epay.Encryption.PASSWORD.RTA_Dubai" defaultValue="gm3mb%$nc6v7|}W"/>
+	
+	<property name="mpay.Encryption.PASSWORD.RTA_Public_Transport"  description="mpay.Encryption.PASSWORD.RTA_Public_Transport" defaultValue="thi$H@s2b$tr0nG"/>
+	<property name="mpay.Encryption.PASSWORD.RTA_Corporate_Services"  description="mpay.Encryption.PASSWORD.RTA_Corporate_Services" defaultValue="aN0th3rP@s$w0Rd"/>
+	<property name="mpay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="mpay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue="nIeCtrYBr3cKINg"/>
+	<property name="mpay.Encryption.PASSWORD.Smart_Dubai_Parking"  description="mpay.Encryption.PASSWORD.Smart_Dubai_Parking" defaultValue="d0NTp1@YwItHm3"/>
+	<property name="mpay.Encryption.PASSWORD.RTA_Dubai"  description="mpay.Encryption.PASSWORD.RTA_Dubai" defaultValue="gm3mb%$nc6v7|}W"/>
+</mfp:adapter>

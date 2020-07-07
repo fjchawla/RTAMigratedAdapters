@@ -1,0 +1,35 @@
+<ns2:adapter name="drivers_and_vehicles_SalikLookupAdapter" platformVersion="7.1.0.00.20161006-0540" xmlns:ns2="http://www.ibm.com/mfp/integration">
+    <displayName>drivers_and_vehicles_SalikLookupAdapter</displayName>
+    <description>drivers_and_vehicles_SalikLookupAdapter</description>
+    <connectivity>
+        <connectionPolicy xmlns:ns4="http://www.ibm.com/mfp/integration/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>rtamhtibstgems1.rtatestdom.local</domain>
+            <port>11067</port>
+            <connectionTimeoutInMilliseconds>120000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>120000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getEmirateLookup" />
+    <procedure name="getPlateCodeLookup" />
+    <procedure name="getPlateLookup" />
+    <procedure name="getCountryLookup" />
+    <procedure name="getContactLookup" />
+    <procedure name="getDisputeLookup" />
+    <procedure name="getEmirateLookupTest" />
+    <procedure name="getPlateCodeLookupTest" />
+    <procedure name="getPlateLookupTest" />
+    <procedure name="getCountryLookupTest" />
+    <procedure name="getTransactionTypeLookup" />
+    <procedure name="getSalikAboutPath" />
+    <procedure name="getVehicleLookup" />
+
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
+    <property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue=""/>
+    <property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue=""/>
+	<property name="publicWorkLightProtocol"  description="publicWorkLightProtocol" defaultValue="http"/>
+	<property name="publicWorkLightHostname"  description="publicWorkLightHostname" defaultValue="localhost"/>
+	<property name="publicWorkLightPort"  description="publicWorkLightPort" defaultValue="10080"/>
+	<property name="publicWorkLightContext"  description="publicWorkLightContext" defaultValue="/worklight"/>
+</ns2:adapter>

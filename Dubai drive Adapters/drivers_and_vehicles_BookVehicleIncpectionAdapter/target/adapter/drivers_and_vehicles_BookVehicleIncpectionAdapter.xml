@@ -1,0 +1,25 @@
+<mfp:adapter name="drivers_and_vehicles_BookVehicleIncpectionAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>drivers_and_vehicles_BookVehicleIncpectionAdapter</displayName>
+    <description>drivers_and_vehicles_BookVehicleIncpectionAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>RTAMHTIBSTGAMX1.rtatestdom.local</domain>
+            <port>11050</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getGlobalServices" />
+    <procedure name="getAvailableAppointmentCenters" />
+    <procedure name="getAvailableAppointmentCenterLanes" />
+    <procedure name="addAppointmentToBasket" />
+    <procedure name="getAvailableLaneAppointmentTimeSlots" />
+    <procedure name="submitAppointmentLocationAndTime" />
+    <procedure name="submitContactDetails" />
+    <procedure name="confirmAppointment" />
+    <procedure name="getAvailableAppointmentCentersByDate" />
+    <procedure name="getAvailableAppointmentTimeSlots" />
+    <procedure name="getAppointmentBasket" />
+</mfp:adapter>

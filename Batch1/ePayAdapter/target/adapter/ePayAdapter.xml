@@ -1,0 +1,38 @@
+<mfp:adapter name="ePayAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>ePayAdapter</displayName>
+    <description>ePayAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>rtamhtibstgamx1.rtatestdom.local</domain>
+            <port>11088</port>
+            <connectionTimeoutInMilliseconds>60000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>60000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="getTransactionStatus" />
+    <procedure name="getTransactionStatusWithoutRecording" />
+    <procedure name="getTransactionStatusInternal" />
+    <procedure name="createEPayRequest" />
+    <procedure name="executeTransactionForApplePay" />
+    <procedure name="updateStatusUsingToken" />
+    <procedure name="testlogging" />
+
+    <property name="epay.DSGOptions.PYMTCHANNELCODE"  description="epay.DSGOptions.PYMTCHANNELCODE" defaultValue="100"/>
+    <property name="epay.DSGOptions.VERSIONCODE"  description="epay.DSGOptions.VERSIONCODE" defaultValue="2.1"/>
+    <property name="epay.DSGOptions.SERVCODE"  description="epay.DSGOptions.SERVCODE" defaultValue="mGov"/>
+	<property name="epay.Encryption.PASSWORD.RTA_Dubai"  description="epay.Encryption.PASSWORD." defaultValue="gm3mb%$nc6v7|}W"/>
+	<property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="RTA3"/>
+	<property name="epay.Encryption.ENFORCE_ENCRYPTION"  description="epay.Encryption.ENFORCE_ENCRYPTION" defaultValue="true"/>
+	<property name="epay.Encryption.STRENGTH"  description="epay.Encryption.STRENGTH" defaultValue="128"/>
+	<property name="epay.LegacyApps.COUNT"  description="epay.LegacyApps.COUNT" defaultValue="2"/>
+	<property name="epay.LegacyApps.APP0"  description="epay.LegacyApps.APP0" defaultValue="RTA_Corporate_Services"/>
+	<property name="epay.LegacyApps.APP1"  description="epay.LegacyApps.APP1" defaultValue="RTA_Public_Transport"/>
+	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="MobStgEmsUser"/>
+	<property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="M)b!le@123"/>
+	<property name="epay.DSGOptions.TYPE"  description="epay.DSGOptions.TYPE" defaultValue="sale"/>
+	<property name="epay.DSGOptions.CURRENCY"  description="epay.DSGOptions.CURRENCY" defaultValue="AED"/>
+
+
+</mfp:adapter>

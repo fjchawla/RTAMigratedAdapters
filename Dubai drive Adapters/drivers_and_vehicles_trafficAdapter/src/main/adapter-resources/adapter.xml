@@ -1,0 +1,31 @@
+<mfp:adapter name="drivers_and_vehicles_trafficAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>drivers_and_vehicles_trafficAdapter</displayName>
+    <description>drivers_and_vehicles_trafficAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>test12c</domain>
+            <port>7783</port>
+            <connectionTimeoutInMilliseconds>18000000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>18000000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>1000</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="savePhoto" />
+    <procedure name="fineManagementService" />
+    <procedure name="FFULookupInfoService" />
+    <procedure name="SeasonalCardService" />
+    <procedure name="SeasonalParkingPermitTransaction" />
+    <procedure name="SeasonalParkingPermitTransaction_DD" />
+    <procedure name="TransactionServiceService_operation" />
+    <procedure name="TransactionServiceService_operationStringRequest" />
+    <procedure name="createOwnershipCertificateTransaction" />
+    <procedure name="createOwnershipCertificateTransactionForMany" />
+    <procedure name="payAsCash" />
+    <procedure name="unlockEntity" />
+    <procedure name="lockEntity" />
+
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
+    <property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="RTA3"/>
+    <property name="epay.DSGOptions.SERVCODE"  description="epay.DSGOptions.SERVCODE" defaultValue="mGov"/>
+</mfp:adapter>

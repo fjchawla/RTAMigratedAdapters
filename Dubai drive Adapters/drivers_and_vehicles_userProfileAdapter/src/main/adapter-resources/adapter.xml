@@ -1,0 +1,20 @@
+<mfp:adapter name="drivers_and_vehicles_userProfileAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>drivers_and_vehicles_userProfileAdapter</displayName>
+    <description>drivers_and_vehicles_userProfileAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>rtamhtibstgamx1.rtatestdom.local</domain>
+            <port>11080</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="UserProfileAdapter_getUserProfile" />
+    <procedure name="UserProfileAdapter_linkTrafficFileNo" />
+
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
+    <property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue=""/>
+    <property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue=""/>
+</mfp:adapter>

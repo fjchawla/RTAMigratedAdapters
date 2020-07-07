@@ -1,0 +1,20 @@
+<mfp:adapter name="drivers_and_vehicles_platesAdapter" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:mfp="http://www.ibm.com/mfp/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>drivers_and_vehicles_platesAdapter</displayName>
+    <description>drivers_and_vehicles_platesAdapter</description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>https</protocol>
+            <domain>test12c</domain>
+            <port>7783</port>
+            <connectionTimeoutInMilliseconds>60000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>60000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="generalPlateService" />
+    <procedure name="plateLogoService" />
+    <procedure name="getSpecialPlatesService" />
+    <procedure name="corporateService" />
+    <procedure name="plateAuction" />
+    <procedure name="getRefDomainValuesByCode" />
+</mfp:adapter>

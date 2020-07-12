@@ -1,5 +1,5 @@
 var WSSE_USERNAME = MFP.Server.getPropertyValue("tokens.tipcoService.username");
-var WSSE_PASSWORD = MFP.Server.getPropertyValue("tokens.tipcoService.password"]);
+var WSSE_PASSWORD = MFP.Server.getPropertyValue("tokens.tipcoService.password");
 
 function onLogout(headers, errorMessage) {
 	WL.Server.setActiveUser("masterAuthRealm", null);

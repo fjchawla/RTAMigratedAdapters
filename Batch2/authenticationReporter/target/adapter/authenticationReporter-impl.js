@@ -5,8 +5,8 @@
  *  disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
  */
 
-var USER_NAME = MFP.Server.getPropertyValue("tokens.financialReporter.username"];
-var PASSWORD = MFP.Server.getPropertyValue("tokens.financialReporter.password"];
+var USER_NAME = MFP.Server.getPropertyValue("tokens.financialReporter.username");
+var PASSWORD = MFP.Server.getPropertyValue("tokens.financialReporter.password");
 
 function onAuthRequired(headers, errorMessage) {
 	errorMessage = errorMessage ? errorMessage : null;
@@ -19,8 +19,8 @@ function onAuthRequired(headers, errorMessage) {
 
 function onLogout(headers, errorMessage) {
 	
-	new AuthenticatedUser(null, null, this.getName());
-	//WL.Server.setActiveUser("masterAuthRealm", null);
+	
+	WL.Server.setActiveUser("masterAuthRealm", null);
 
 	return {
 		isSuccessfull : true
@@ -34,8 +34,8 @@ function authenticate(userName, password) {
 		var identity = {
 			userId : userName
 		};
-		new AuthenticatedUser(identity.userId, authenticationReporter, this.getName());
-		//WL.Server.setActiveUser("masterAuthRealm", identity);
+		//new AuthenticatedUser(identity.userId, authenticationReporter, this.getName());
+		WL.Server.setActiveUser("masterAuthRealm", identity);
 
 		return {
 			name : 'authenticationReporter',

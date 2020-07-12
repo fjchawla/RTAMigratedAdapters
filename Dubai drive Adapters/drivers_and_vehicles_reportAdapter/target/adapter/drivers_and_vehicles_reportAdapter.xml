@@ -20,5 +20,5 @@
     <procedure name="clearanceCertificateService" />
     <procedure name="getWearableUserNotifications" />
 
-    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="${DriversAndVehiclesIsDebugging}$"/>
 </mfp:adapter>

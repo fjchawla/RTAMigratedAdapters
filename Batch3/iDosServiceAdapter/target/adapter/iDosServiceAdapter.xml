@@ -12,4 +12,9 @@
         </connectionPolicy>
     </connectivity>
     <procedure name="getAllServices" />
+
+    <property name="tokens.jmsAdapter"  description="tokens.jmsAdapter" defaultValue="${tokenjmsAdapter}$"/>
+    <property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="${wsseTibcoPassword}$"/>
+    <property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="${wsseTibcoUsername}$"/>
+    
 </mfp:adapter>

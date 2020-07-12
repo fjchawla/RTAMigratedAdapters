@@ -16,16 +16,16 @@
 	
 	
 	
-	<property name="epay.Encryption.STRENGTH"  description="epay.Encryption.STRENGTH"  defaultValue="128"/>
-    <property name="epay.Encryption.PASSWORD.RTA_Public_Transport"  description="epay.Encryption.PASSWORD.RTA_Public_Transport" defaultValue="thi$H@s2b$tr0nG"/>
-	<property name="epay.Encryption.PASSWORD.RTA_Corporate_Services"  description="epay.Encryption.PASSWORD.RTA_Corporate_Services" defaultValue="aN0th3rP@s$w0Rd"/>
-	<property name="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue="nIeCtrYBr3cKINg"/>
-	<property name="epay.Encryption.PASSWORD.Smart_Dubai_Parking"  description="epay.Encryption.PASSWORD.Smart_Dubai_Parking" defaultValue="d0NTp1@YwItHm3"/>
-	<property name="epay.Encryption.PASSWORD.RTA_Dubai"  description="epay.Encryption.PASSWORD.RTA_Dubai" defaultValue="gm3mb%$nc6v7|}W"/>
+	<property name="epay.Encryption.STRENGTH"  description="epay.Encryption.STRENGTH"  defaultValue="${EncryptionStrength}$"/>
+    <property name="epay.Encryption.PASSWORD.RTA_Public_Transport"  description="epay.Encryption.PASSWORD.RTA_Public_Transport" defaultValue="${epayEncryptionPasswordRTAPublicTransport}$"/>
+	<property name="epay.Encryption.PASSWORD.RTA_Corporate_Services"  description="epay.Encryption.PASSWORD.RTA_Corporate_Services" defaultValue="${epayEncryptionPasswordRTACorporateServices}$"/>
+	<property name="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue="${epayEncryptionPasswordRTADriversAndaVehicles}$"/>
+	<property name="epay.Encryption.PASSWORD.Smart_Dubai_Parking"  description="epay.Encryption.PASSWORD.Smart_Dubai_Parking" defaultValue="${epayEncryptionPasswordSmartDubaiParking}$"/>
+	<property name="epay.Encryption.PASSWORD.RTA_Dubai"  description="epay.Encryption.PASSWORD.RTA_Dubai" defaultValue="${epayEncryptionPasswordRTADubai}$"/>
 	
-	<property name="mpay.Encryption.PASSWORD.RTA_Public_Transport"  description="mpay.Encryption.PASSWORD.RTA_Public_Transport" defaultValue="thi$H@s2b$tr0nG"/>
-	<property name="mpay.Encryption.PASSWORD.RTA_Corporate_Services"  description="mpay.Encryption.PASSWORD.RTA_Corporate_Services" defaultValue="aN0th3rP@s$w0Rd"/>
-	<property name="mpay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="mpay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue="nIeCtrYBr3cKINg"/>
-	<property name="mpay.Encryption.PASSWORD.Smart_Dubai_Parking"  description="mpay.Encryption.PASSWORD.Smart_Dubai_Parking" defaultValue="d0NTp1@YwItHm3"/>
-	<property name="mpay.Encryption.PASSWORD.RTA_Dubai"  description="mpay.Encryption.PASSWORD.RTA_Dubai" defaultValue="gm3mb%$nc6v7|}W"/>
+	<property name="mpay.Encryption.PASSWORD.RTA_Public_Transport"  description="mpay.Encryption.PASSWORD.RTA_Public_Transport" defaultValue="${mpayEncryptionPasswordRTAPublicTransport}$"/>
+	<property name="mpay.Encryption.PASSWORD.RTA_Corporate_Services"  description="mpay.Encryption.PASSWORD.RTA_Corporate_Services" defaultValue="${mpayEncryptionPasswordRTACorporateServices}$"/>
+	<property name="mpay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="mpay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue="${mpayEncryptionPasswordRTADriversAndaVehicles}$"/>
+	<property name="mpay.Encryption.PASSWORD.Smart_Dubai_Parking"  description="mpay.Encryption.PASSWORD.Smart_Dubai_Parking" defaultValue="${mpayEncryptionPasswordSmartDubaiParking}$"/>
+	<property name="mpay.Encryption.PASSWORD.RTA_Dubai"  description="mpay.Encryption.PASSWORD.RTA_Dubai" defaultValue="${mpayEncryptionPasswordRTADubai}$"/>
 </mfp:adapter>

@@ -14,7 +14,7 @@
     <procedure name="OTP" />
     <procedure name="OTPTest" />
 
-    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
-    <property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue=""/>
-    <property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue=""/>
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="${DriversAndVehiclesIsDebugging}$"/>
+    <property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="${wsseTibcoUsername}$"/>
+    <property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="${wsseTibcoPassword}$"/>
 </mfp:adapter>

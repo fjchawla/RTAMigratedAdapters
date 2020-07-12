@@ -20,20 +20,20 @@
     <procedure name="generateCheckSum" />
 	
 	
-	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="Mobstguser"/>
-	<property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="1^p(4q!7jr*8"/>
-	<property name="mpay.Encryption.ENFORCE_ENCRYPTION"  description="mpay.Encryption.ENFORCE_ENCRYPTION" defaultValue="true"/>
-	<property name="mpay.Encryption.STRENGTH"  description="mpay.Encryption.STRENGTH" defaultValue="128"/>
-	<property name="mpay.ENFORCE_AMOUNT_VERIFICATION"  description="mpay.ENFORCE_AMOUNT_VERIFICATION" defaultValue="true"/>
-	<property name="tokens.recentActivities"  description="tokens.recentActivities" defaultValue="bnZxJfbS"/>
-    <property name="mpay.DSG.secretCode"  description="mpay.DSG.secretCode" defaultValue="B77ADFECB8B8F67D64A43DED6C82794F2536C071FED9B0D0F04C9B7FF49A19FF7808B602DB69B618F885B309F8E827A7850714A8AEEB7F4BFEC209AFA4D9D10D"/>
-    <property name="mpay.DSGOptions.SPCODE"  description="mpay.DSGOptions.SPCODE" defaultValue="RTA3"/>
-	<property name="mpay.DSGOptions.SERVCODE"  description="mpay.DSGOptions.SERVCODE" defaultValue="RTAWallet"/>
-    <property name="mpay.Encryption.PASSWORD.RTA_Public_Transport"  description="mpay.Encryption.PASSWORD.RTA_Public_Transport" defaultValue="thi$H@s2b$tr0nG"/>
-    <property name="mpay.Encryption.PASSWORD.RTA_Corporate_Services"  description="mpay.Encryption.PASSWORD.RTA_Corporate_Services" defaultValue="aN0th3rP@s$w0Rd"/>
-    <property name="mpay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="mpay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue="nIeCtrYBr3cKINg"/>
-    <property name="mpay.Encryption.PASSWORD.Smart_Dubai_Parking"  description="mpay.Encryption.PASSWORD.Smart_Dubai_Parking" defaultValue="d0NTp1@YwItHm3"/>
-    <property name="mpay.Encryption.PASSWORD.RTA_Dubai"  description="mpay.Encryption.PASSWORD.RTA_Dubai" defaultValue="gm3mb%$nc6v7|}W"/>
+    <property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>
+    <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="${tipcoServicePassword}$"/>
+	<property name="mpay.Encryption.ENFORCE_ENCRYPTION"  description="mpay.Encryption.ENFORCE_ENCRYPTION" defaultValue="${mpayEncryptionEnforceEncryption}$"/>
+	<property name="mpay.Encryption.STRENGTH"  description="mpay.Encryption.STRENGTH" defaultValue="${mpayEncryptionStrength}$"/>
+	<property name="mpay.ENFORCE_AMOUNT_VERIFICATION"  description="mpay.ENFORCE_AMOUNT_VERIFICATION" defaultValue="${mpayEnforceAmountVerification}$"/>
+	<property name="tokens.recentActivities"  description="tokens.recentActivities" defaultValue="${tokenRecentActivities}$"/>
+    <property name="mpay.DSG.secretCode"  description="mpay.DSG.secretCode" defaultValue="${DSGSecretCode}$"/>
+    <property name="mpay.DSGOptions.SPCODE"  description="mpay.DSGOptions.SPCODE" defaultValue="${DSGOptionsSPCODE}$"/>
+	<property name="mpay.DSGOptions.SERVCODE"  description="mpay.DSGOptions.SERVCODE" defaultValue="${DSGOptionsSERVCODE}$"/>
+    <property name="mpay.Encryption.PASSWORD.RTA_Public_Transport"  description="mpay.Encryption.PASSWORD.RTA_Public_Transport" defaultValue="${mpayEncryptionPasswordRTAPublicTransport}$"/>
+    <property name="mpay.Encryption.PASSWORD.RTA_Corporate_Services"  description="mpay.Encryption.PASSWORD.RTA_Corporate_Services" defaultValue="${mpayEncryptionPasswordRTACorporateServices}$"/>
+    <property name="mpay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="mpay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue="${mpayEncryptionPasswordRTADriversAndaVehicles}$"/>
+    <property name="mpay.Encryption.PASSWORD.Smart_Dubai_Parking"  description="mpay.Encryption.PASSWORD.Smart_Dubai_Parking" defaultValue="${mpayEncryptionPasswordSmartDubaiParking}$"/>
+    <property name="mpay.Encryption.PASSWORD.RTA_Dubai"  description="mpay.Encryption.PASSWORD.RTA_Dubai" defaultValue="${mpayEncryptionPasswordRTADubai}$"/>
    
     
 

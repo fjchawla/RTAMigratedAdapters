@@ -14,11 +14,11 @@
     <procedure name="getUIList" />
     <procedure name="getImageInBase64" />
 	
-	<property name="rta.soap.language.header.xmlns"  description="rta.soap.language.header.xmlns" defaultValue="http://www.rta.ae/ActiveMatrix/ESB/AcceptLanguage/XMLSchema/"/>
-	<property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="tstuser0"/>
-	<property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="May2008"/>
-	<property name="rta.pt.nolCardTopUpService.endPoint"  description="rta.pt.nolCardTopUpService.endPoint" defaultValue="/mobilenolcardtopupservice"/>
-	<property name="rta.image.nolTempPath"  description="rta.image.nolTempPath" defaultValue="/tmp"/>
+	<property name="rta.soap.language.header.xmlns"  description="rta.soap.language.header.xmlns" defaultValue="${rtaSoapLanguageHeaderXmlns}$"/>
+	<property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="${wsseTibcoUsername}$"/>
+	<property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="${wsseTibcoPassword}$"/>
+	<property name="rta.pt.nolCardTopUpService.endPoint"  description="rta.pt.nolCardTopUpService.endPoint" defaultValue="${rtaPtNolCardTopUpServiceEndPoint}$"/>
+	<property name="rta.image.nolTempPath"  description="rta.image.nolTempPath" defaultValue="${rtaImageNolTempPath}$"/>
 	
 	
 </mfp:adapter>

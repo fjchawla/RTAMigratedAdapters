@@ -26,7 +26,7 @@
     <procedure name="lockEntity" />
 
     
-    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
-    <property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="RTA3"/>
-    <property name="epay.DSGOptions.SERVCODE"  description="epay.DSGOptions.SERVCODE" defaultValue="mGov"/>
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="${DriversAndVehiclesIsDebugging}$"/>
+   <property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="${DSGOptionsSPCODE}$"/>
+    <property name="epay.DSGOptions.SERVCODE"  description="epay.DSGOptions.SERVCODE" defaultValue="${DSGOptionsSERVCODE}$"/>
 </mfp:adapter>

@@ -17,9 +17,9 @@
     <procedure name="getHandbookURL" />
     <procedure name="submitFeedback" />
 
-    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
-    <property name="publicWorkLightProtocol"  description="publicWorkLightProtocol" defaultValue="http"/>
-	<property name="publicWorkLightHostname"  description="publicWorkLightHostname" defaultValue="localhost"/>
-	<property name="publicWorkLightPort"  description="publicWorkLightPort" defaultValue="10080"/>
-	<property name="publicWorkLightContext"  description="publicWorkLightContext" defaultValue="/worklight"/>
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="${DriversAndVehiclesIsDebugging}$"/>
+    <property name="publicWorkLightProtocol"  description="publicWorkLightProtocol" defaultValue="${publicWorklightProtocol}$"/>
+	<property name="publicWorkLightHostname"  description="publicWorkLightHostname" defaultValue="${publicWorklightHostname}$"/>
+	<property name="publicWorkLightPort"  description="publicWorkLightPort" defaultValue="${publicWorklightPort}$"/>
+	<property name="publicWorkLightContext"  description="publicWorkLightContext" defaultValue="${publicWorklightContext}$"/>
 </mfp:adapter>

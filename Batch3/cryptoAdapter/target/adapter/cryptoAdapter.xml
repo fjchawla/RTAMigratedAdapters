@@ -14,5 +14,5 @@
     <procedure name="encryptData" />
     <procedure name="decryptData" />
 	
-	<property name="epay.Encryption.STRENGTH"  description="epay.Encryption.STRENGTH" defaultValue="128"/>
+	<property name="epay.Encryption.STRENGTH"  description="epay.Encryption.STRENGTH" defaultValue="${epayEncryptionStrength}$"/>
 </mfp:adapter>

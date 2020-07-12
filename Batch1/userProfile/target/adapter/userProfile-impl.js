@@ -1033,19 +1033,19 @@ function setUserFavoriteService(id, user_id, service_title) {
 			service_title = this._preventJsInjection(service_title);
 
 			var resultSelect = MFP.Server.invokeSQLStatement({
-				preparedStatement : DB_TABLES['FavoriteServices'].sqlGet,
+				preparedStatement : 'SELECT ID "id", SERVICE_TITLE "service_title", USERS_ID "Users_id" FROM Favorite_Services WHERE id=? and Users_id=?',
 				parameters : [ id, user_id ]
 			});
 
 			if (resultSelect && resultSelect.isSuccessful) {
 				if ((!resultSelect.resultSet) || (resultSelect.resultSet && resultSelect.resultSet.length == 0)) {
 					return MFP.Server.invokeSQLStatement({
-						preparedStatement : DB_TABLES['FavoriteServices'].sqlInsert,
+						preparedStatement : 'INSERT INTO Favorite_Services (id, service_title, Users_id) VALUES (?,?,?)',
 						parameters : [ id, service_title, user_id ]
 					});
 				} else if (resultSelect.resultSet && resultSelect.resultSet.length > 0) {
 					return MFP.Server.invokeSQLStatement({
-						preparedStatement : DB_TABLES['FavoriteServices'].sqlUpdate,
+						preparedStatement : 'UPDATE Favorite_Services SET service_title=? WHERE id=? and Users_id=?',
 						parameters : [ service_title, id, user_id ]
 					});
 				}

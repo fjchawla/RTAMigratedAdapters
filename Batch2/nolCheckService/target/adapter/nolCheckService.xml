@@ -15,17 +15,16 @@
     <procedure name="errorCheck" />
     <procedure name="configCheck" />
 	
-	<property name="rta.nol.card.personalise.receipt.en.path"  description="rta.nol.card.personalise.receipt.en.path" defaultValue="/Users/simonlee/Documents/workspace_m2_worklight_rta_cs220_wave_2/Smart_Public_Transport/server/jasper/cardPersonaliseReceipt.jasper"/>
-	<property name="rta.image.nolTempPath"  description="rta.image.nolTempPath" defaultValue="/tmp"/>
-	<property name="rta.nol.card.personalise.receipt.en.path"  description="rta.nol.card.personalise.receipt.en.path" defaultValue="/Users/simonlee/Documents/workspace_m2_worklight_rta_cs220_wave_2/Smart_Public_Transport/server/jasper/cardPersonaliseReceipt.jasper"/>
-	<property name="rta.nol.general.history.en.path"  description="rta.nol.general.history.en.path" defaultValue="/Users/simonlee/mygit/rta-octopus/Smart_Public_Transport/server/jasper/nolGeneralHistory.jasper"/>
-	
-	<property name="rta.nol.topup.receipt.en.path"  description="rta.nol.topup.receipt.en.path" defaultValue="/Users/simonlee/Documents/workspace_m2_worklight_rta_cs220_wave_2/Smart_Public_Transport/server/jasper/TopupReceipt.jasper"/>
-	<property name="rta.nol.travel.history.en.path"  description="rta.nol.travel.history.en.path" defaultValue="/Users/simonlee/mygit/rta-octopus/Smart_Public_Transport/server/jasper/nolTravelHistory.jasper"/>
-	<property name="rta.nol.general.history.en.path"  description="rta.nol.general.history.en.path" defaultValue="May2008"/>
-	<property name="rta.nol.renew.travel.pass.receipt.en.path"  description="rta.nol.renew.travel.pass.receipt.en.path" defaultValue="/Users/simonlee/Documents/workspace_m2_worklight_rta_cs220_wave_2/Smart_Public_Transport/server/jasper/nolRenewTravelPassReceipt.jasper"/>
+	<property name="rta.nol.card.personalise.receipt.en.path"  description="rta.nol.card.personalise.receipt.en.path" defaultValue="${rtaNolCardPersonaliseReceiptEnPath}$"/>
+	<property name="rta.image.nolTempPath"  description="rta.image.nolTempPath" defaultValue="${rtaImageNolTempPath}$"/>
+	<property name="rta.nol.term.and.condition.pdf.path"  description="rta.nol.term.and.condition.pdf.path" defaultValue="${rtaNolCardPersonaliseReceiptEnPath}$"/>
+	<property name="rta.nol.term.and.condition.pdf.path.ae"  description="rta.nol.term.and.condition.pdf.path.ae" defaultValue="${rtaNolTermAndConditionPDFPath}$"/>
 	
 	
+	<property name="rta.nol.topup.receipt.en.path"  description="rta.nol.topup.receipt.en.path" defaultValue="${rtaNolTopupReceiptEnPath}$"/>
+	<property name="rta.nol.travel.history.en.path"  description="rta.nol.travel.history.en.path" defaultValue="${rtaNolTravelHistoryEnPath}$"/>
+	<property name="rta.nol.general.history.en.path"  description="rta.nol.general.history.en.path" defaultValue="${rtaNolGeneralHistoryEnPath}$"/>
+	<property name="rta.nol.renew.travel.pass.receipt.en.path"  description="rta.nol.renew.travel.pass.receipt.en.path" defaultValue="${rtaNolRenewTravelPassReceiptEnPath}$"/>
 	
 	
 </mfp:adapter>

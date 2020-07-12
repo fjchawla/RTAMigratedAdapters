@@ -14,7 +14,7 @@
     <procedure name="verifyData" />
     <procedure name="encryptData" />
 
-    	<property name="tokens.recentActivities"  description="tokens.recentActivities" defaultValue="bnZxJfbS"/>
-    <property name="epay.Encryption.STRENGTH"  description="epay.Encryption.STRENGTH" defaultValue="128"/>
-    <property name="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue=""/>
+    	<property name="tokens.recentActivities"  description="tokens.recentActivities" defaultValue="${tokenRecentActivities}$"/>
+    <property name="epay.Encryption.STRENGTH"  description="epay.Encryption.STRENGTH" defaultValue="${EncryptionStrength}$"/>
+    <property name="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles"  description="epay.Encryption.PASSWORD.RTA_Drivers_And_Vehicles" defaultValue="${epayEncryptionPasswordRTADriversAndaVehicles}$"/>
 </mfp:adapter>

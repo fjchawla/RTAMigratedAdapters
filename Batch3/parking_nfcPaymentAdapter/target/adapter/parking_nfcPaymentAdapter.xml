@@ -1,0 +1,17 @@
+<ns2:adapter name="parking_nfcPaymentAdapter" platformVersion="7.1.0.00.20161006-0540" xmlns:ns2="http://www.ibm.com/mfp/integration">
+    <displayName>parking_nfcPaymentAdapter</displayName>
+    <description>parking_nfcPaymentAdapter</description>
+    <connectivity>
+        <connectionPolicy xmlns:ns4="http://www.ibm.com/mfp/integration/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:HTTPConnectionPolicyType">
+            <protocol>http</protocol>
+            <domain>86.96.192.57</domain>
+            <port>80</port>
+            <connectionTimeoutInMilliseconds>5000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>5000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>
+        </connectionPolicy>
+    </connectivity>
+    <procedure name="balanceEnquiry" />
+    <procedure name="initNFCPayment" />
+    <procedure name="completeNFCPayment" />
+</ns2:adapter>

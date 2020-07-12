@@ -13,7 +13,7 @@
     </connectivity>
     <procedure name="signApi" />
 	
-	<property name="google.clientID"  description="google.clientID" defaultValue="gme-roadstransportauthority"/>
-	<property name="google.cryptoKey"  description="google.cryptoKey" defaultValue="X9V8YYU2MIK25fU45dxLqvoiI4A="/>
+	<property name="google.clientID"  description="google.clientID" defaultValue="${googleClientId}$"/>
+	<property name="google.cryptoKey"  description="google.cryptoKey" defaultValue="${googleCryptoKey}$"/>
 
 </mfp:adapter>

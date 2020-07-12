@@ -22,7 +22,7 @@
 	<procedure name="authenticate" scope="wl_unprotected" />
 	<procedure name="onLogout" scope="wl_unprotected" />
 	
-	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="Mobstguser"/>
-	<property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="1^p(4q!7jr*8"/>
+	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>
+    <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="${tipcoServicePassword}$"/>
 
 </ns2:adapter>

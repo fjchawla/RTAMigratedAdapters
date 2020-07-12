@@ -13,6 +13,6 @@
     </connectivity>
     <procedure name="getRecentActivities" scope="masterAuthSecurityCheck" />
 	
-	<property name="tokens.portal.vendorUsername" description="tokens.portal.vendorUsername" defaultValue="RTA_COMMON_SHELL_PORTAL_ACCOUNT"/>
-	<property name="tokens.portal.vendorPassword" description="tokens.portal.vendorPassword" defaultValue="dDv7$Q>19TyW*0Im]x^F"/>
+	<property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="${portalVendorUsername}$"/>
+	<property name="tokens.portal.vendorPassword"  description="tokens.portal.vendorPassword" defaultValue="${portalVendorPassword}$"/>
 </mfp:adapter>

@@ -17,8 +17,8 @@
     <procedure name="checkMPayStatus" />
     <procedure name="checkEPayStatus" />
 
-    <property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="RTA3"/>
-    <property name="epay.DSGOptions.SERVCODE"  description="epay.DSGOptions.SERVCODE" defaultValue="mGov"/>
-    <property name="mpay.DSGOptions.SPCODE"  description="mpay.DSGOptions.SPCODE" defaultValue="RTA3"/>
-    <property name="mpay.DSGOptions.SERVCODE"  description="mpay.DSGOptions.SERVCODE" defaultValue="RTAWallet"/>
+     <property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="${DSGOptionsSPCODE}$"/>
+    <property name="epay.DSGOptions.SERVCODE"  description="epay.DSGOptions.SERVCODE" defaultValue="${DSGOptionsSERVCODE}$"/>
+    <property name="mpay.DSGOptions.SPCODE"  description="mpay.DSGOptions.SPCODE" defaultValue="${DSGOptionsSPCODE}$"/>
+	<property name="mpay.DSGOptions.SERVCODE"  description="mpay.DSGOptions.SERVCODE" defaultValue="${DSGOptionsSERVCODE}$"/>
 </mfp:adapter>

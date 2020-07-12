@@ -14,7 +14,7 @@
     <procedure name="submitPersonaliseApplication" />
     <procedure name="validatePersonaliseApplication" />
 	
-	<property name="rta.soap.language.header.xmlns"  description="rta.soap.language.header.xmlns" defaultValue="http://www.rta.ae/ActiveMatrix/ESB/AcceptLanguage/XMLSchema/"/>
-	<property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="tstuser0"/>
-	<property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="May2008"/>
+	 <property name="rta.soap.language.header.xmlns"  description="rta.soap.language.header.xmlns" defaultValue="${rtaSoapLanguageHeaderXmlns}$"/>
+	<property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="${wsseTibcoUsername}$"/>
+	<property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="${wsseTibcoPassword}$"/>
 </mfp:adapter>

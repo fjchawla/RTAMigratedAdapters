@@ -16,6 +16,6 @@
 	
 	<property name="tokens.mstore.username.external"  description="tokens.mstore.username.external" defaultValue=""/>
 	<property name="tokens.mstore.password.external"  description="tokens.mstore.password.external" defaultValue=""/>
-	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue=""/>
-	<property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue=""/>
+	 <property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>
+    <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="${tipcoServicePassword}$"/>
 </mfp:adapter>

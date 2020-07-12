@@ -14,6 +14,6 @@
     <procedure name="invokeWebServiceByStringRequest" />
     <procedure name="invokeWaterTaxiServiceByStringRequest" />
 
-    <property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue=""/>
-    <property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue=""/>
+    <property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="${wsseTibcoUsername}$"/>
+    <property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="${wsseTibcoPassword}$"/>
 </mfp:adapter>

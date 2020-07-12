@@ -87,15 +87,15 @@
 	
 	
 	
-	<property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="RTA_COMMON_SHELL_PORTAL_ACCOUNT"/>
-	<property name="tokens.portal.vendorPassword"  description="tokens.portal.vendorPassword" defaultValue="dDv7$Q>19TyW*0Im]x^F"/>
-	<property name="tokens.pushToken"  description="tokens.portal.vendorUsername" defaultValue="RTA_COMMON_SHELL_PORTAL_ACCOUNT"/>
-	<property name="tokens.recentActivities"  description="tokens.portal.vendorPassword" defaultValue="dDv7$Q>19TyW*0Im]x^F"/>
-    <property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="RTA3"/>
-    <property name="epay.DSGOptions.SERVCODE"  description="epay.DSGOptions.SERVCODE" defaultValue="mGov"/>
-    <property name="mpay.DSGOptions.SPCODE"  description="mpay.DSGOptions.SPCODE" defaultValue="RTA3"/>
-    <property name="mpay.DSGOptions.SERVCODE"  description="mpay.DSGOptions.SERVCODE" defaultValue="RTAWallet"/>
-	<property name="tokens.jmsAdapter"  description="tokens.jmsAdapter" defaultValue="M)b!le@12345"/>
+	<property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="${portalVendorUsername}$"/>
+	<property name="tokens.portal.vendorPassword"  description="tokens.portal.vendorPassword" defaultValue="${portalVendorPassword}$"/>
+	<property name="tokens.pushToken"  description="tokens.portal.vendorUsername" defaultValue="${tokenPush}$"/>
+	<property name="tokens.recentActivities"  description="tokens.recentActivities" defaultValue="${tokenRecentActivities}$"/>
+    <property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="${DSGOptionsSPCODE}$"/>
+    <property name="epay.DSGOptions.SERVCODE"  description="epay.DSGOptions.SERVCODE" defaultValue="${DSGOptionsSERVCODE}$"/>
+    <property name="mpay.DSGOptions.SPCODE"  description="mpay.DSGOptions.SPCODE" defaultValue="${DSGOptionsSPCODE}$"/>
+	<property name="mpay.DSGOptions.SERVCODE"  description="mpay.DSGOptions.SERVCODE" defaultValue="${DSGOptionsSERVCODE}$"/>
+	<property name="tokens.jmsAdapter"  description="tokens.jmsAdapter" defaultValue="${tokenjmsAdapter}$"/>
 
 </ns2:adapter>
 

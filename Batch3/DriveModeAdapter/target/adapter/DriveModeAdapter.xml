@@ -14,9 +14,9 @@
     <procedure name="getDriveModeData" />
     <procedure name="getEVData" />
 	
-	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="Mobstguser"/>
-	<property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="1^p(4q!7jr*8"/>	
-	<property name="tokens.portal.username"  description="tokens.portal.username" defaultValue="vZM7!3G492sa91$587E5932!A"/>
-	<property name="tokens.portal.password"  description="tokens.portal.password" defaultValue=""/>
+	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>
+	<property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="${tipcoServicePassword}$"/>	
+	<property name="tokens.portal.username"  description="tokens.portal.username" defaultValue="${tokensPortalUsername}$"/>
+	<property name="tokens.portal.password"  description="tokens.portal.password" defaultValue="${tokensPortalPassword}$"/>
 	
 </mfp:adapter>

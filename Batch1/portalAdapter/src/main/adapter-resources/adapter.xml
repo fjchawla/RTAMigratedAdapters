@@ -25,10 +25,10 @@
     <procedure name="checkUserAvailability" />
     <procedure name="linkUAEPassId" />
 
-    <property name="tokens.mstore.username.external"  description="tokens.mstore.username.external" defaultValue="mobile_user"/>
-	<property name="tokens.mstore.password.external"  description="tokens.mstore.password.external" defaultValue="eyprtm"/>
-	<property name="tokens.portal.username"  description="tokens.portal.username" defaultValue="vZM7!3G492sa91$587E5932!A"/>
-	<property name="tokens.portal.password"  description="tokens.portal.password" defaultValue="9aZ!jG832/1dF8#;2yN9Ab6as"/>
-	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="Mobstguser"/>
-	<property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="1^p(4q!7jr*8"/>
+    <property name="tokens.mstore.username.external"  description="tokens.mstore.username.external" defaultValue="${tokenMstoreUsernameExternal}$"/>
+	<property name="tokens.mstore.password.external"  description="tokens.mstore.password.external" defaultValue="${tokenMStorePasswordExternal}$"/>
+	<property name="tokens.portal.username"  description="tokens.portal.username" defaultValue="${tokensPortalUsername}$"/>
+	<property name="tokens.portal.password"  description="tokens.portal.password" defaultValue="${tokensPortalPassword}$"/>
+    <property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>
+    <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="${tipcoServicePassword}$"/>
 </mfp:adapter>

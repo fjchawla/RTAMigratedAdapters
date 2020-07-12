@@ -13,6 +13,8 @@
     </connectivity>
     <procedure name="authenticate" />
 
-    <property name="tokens.financialReporter.username"  description="tokens.financialReporter.username" defaultValue="RTA_FINANCE_ACCOUNT"/>
-	<property name="tokens.financialReporter.password"  description="tokens.financialReporter.password" defaultValue="rtaSpeed%44%"/>
+    <property name="tokens.financialReporter.username"  description="tokens.financialReporter.username" defaultValue="${tokenFinancialReporterUsername}$"/>
+	<property name="tokens.financialReporter.password"  description="tokens.financialReporter.password" defaultValue="${tokenFinancialReporterPassword}$"/>
+
+
 </mfp:adapter>

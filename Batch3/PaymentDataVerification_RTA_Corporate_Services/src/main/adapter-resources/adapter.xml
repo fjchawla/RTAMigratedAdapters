@@ -14,6 +14,6 @@
     <procedure name="verifyData" />
 	
 	
-	"tokens.recentActivities"
-	<property name="tokens.recentActivities"  description="tokens.recentActivities" defaultValue="bnZxJfbS"/>
+	
+	<property name="tokens.recentActivities"  description="tokens.recentActivities" defaultValue="${tokenRecentActivities}$"/>
 </mfp:adapter>

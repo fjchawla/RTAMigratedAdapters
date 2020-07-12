@@ -31,8 +31,8 @@
     <procedure name="getPermitFeesAmount" />
     <procedure name="submitPermitApplication" />
 
-    <property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="Mobstguser"/>
-    <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="1^p(4q!7jr*8"/>
-    <property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="RTA_COMMON_SHELL_PORTAL_ACCOUNT"/>
-    <property name="tokens.portal.vendorPassword"  description="tokens.portal.vendorPassword" defaultValue="dDv7$Q>19TyW*0Im]x^F"/>
+    <property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>
+    <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="${tipcoServicePassword}$"/>
+    <property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="${portalVendorUsername}$"/>
+	<property name="tokens.portal.vendorPassword"  description="tokens.portal.vendorPassword" defaultValue="${portalVendorPassword}$"/>
 </mfp:adapter>

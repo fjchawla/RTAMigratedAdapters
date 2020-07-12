@@ -14,8 +14,8 @@
     <procedure name="getBalance" />
     <procedure name="serviceEnrolment" />
 
-    <property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="MobStgEmsUser"/>
-	<property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="M)b!le@123"/>
-	<property name="tokens.mstore.username.external"  description="tokens.mstore.username.external" defaultValue="mobile_user"/>
-	<property name="tokens.mstore.password.external"  description="tokens.mstore.password.external" defaultValue="eyprtm"/>
+   <property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>
+    <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="${tipcoServicePassword}$"/>
+	<property name="tokens.mstore.username.external"  description="tokens.mstore.username.external" defaultValue="${tokenMstoreUsernameExternal}$"/>
+	<property name="tokens.mstore.password.external"  description="tokens.mstore.password.external" defaultValue="${tokenMstorePasswordExternal}$"/>
 </mfp:adapter>

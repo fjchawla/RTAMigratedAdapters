@@ -16,6 +16,6 @@
     <procedure name="getNextTrain" />
 
 
-    <property name="public_transport_is_debugging"  description="public_transport_is_debugging" defaultValue="true"/>
+    <property name="public_transport_is_debugging"  description="public_transport_is_debugging" defaultValue="${publicTransportDebugging}$"/>
     <property name="public_transport_metro_sheet_path"  description="public_transport_metro_sheet_path" defaultValue="C:/smartgov/cms/publictrans/metro_time"/>
 </mfp:adapter>

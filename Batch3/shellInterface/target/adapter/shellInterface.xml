@@ -20,10 +20,10 @@
     <procedure name="mPayTransactionStatusInternal" />
 	
 	
-	<property name="tokens.portal.vendorUsername" description="tokens.portal.vendorUsername" defaultValue="RTA_COMMON_SHELL_PORTAL_ACCOUNT"/>
-	<property name="tokens.portal.vendorPassword" description="tokens.portal.vendorPassword" defaultValue="dDv7$Q>19TyW*0Im]x^F"/>
-	<property name="tokens.recentActivities" description="tokens.recentActivities" defaultValue="bnZxJfbS"/>
-	<property name="epay.DSGOptions.SPCODE" description="epay.DSGOptions.SPCODE" defaultValue="RTA3"/>
+	<property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="${portalVendorUsername}$"/>
+	<property name="tokens.portal.vendorPassword"  description="tokens.portal.vendorPassword" defaultValue="${portalVendorPassword}$"/>
+	<property name="tokens.recentActivities" description="tokens.recentActivities" defaultValue="${tokenRecentActivities}$"/>
+	<property name="epay.DSGOptions.SPCODE" description="epay.DSGOptions.SPCODE" defaultValue="${DSGOptionsSPCODE}$"/>
 	
 	
 </mfp:adapter>

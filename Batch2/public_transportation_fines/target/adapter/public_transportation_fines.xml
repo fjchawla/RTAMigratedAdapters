@@ -13,9 +13,9 @@
     </connectivity>
     <procedure name="SubmitFinesObjectionService" />
 
-    <property name="public_transport_debugging"  description="public_transport_debugging" defaultValue="true"/>
-    <property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue=""/>
-    <property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue=""/>
-    <property name="rta.soap.language.header.xmlns"  description="rta.soap.language.header.xmlns" defaultValue="http://www.rta.ae/ActiveMatrix/ESB/AcceptLanguage/XMLSchema/"/>
+    <property name="public_transport_debugging"  description="public_transport_debugging" defaultValue="${publicTransportDebugging}$"/>
+    <property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="${wsseTibcoUsername}$"/>
+    <property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="${wsseTibcoPassword}$"/>
+    <property name="rta.soap.language.header.xmlns"  description="rta.soap.language.header.xmlns" defaultValue="${rtaSoapLanguageHeaderXmlns}$"/>
 
 </mfp:adapter>

@@ -16,6 +16,6 @@
     <procedure name="responsePersonaliseApplication" />
     <procedure name="reviewPersonaliseApplication" />
 	
-	<property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="tstuser0"/>
-	<property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="May2008"/>
+	<property name="wsse.tibco.username"  description="wsse.tibco.username" defaultValue="${wsseTibcoUsername}$"/>
+	<property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="${wsseTibcoPassword}$"/>
 </mfp:adapter>

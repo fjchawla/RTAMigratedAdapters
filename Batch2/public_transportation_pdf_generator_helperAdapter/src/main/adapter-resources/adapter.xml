@@ -14,6 +14,6 @@
     <procedure name="generatePDFReport" />
     <procedure name="generateMultiPDFReports" />
 
-    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="true"/>
-    <property name="public_transportation_reports_path"  description="public_transportation_reports_path" defaultValue="D:/PTA report"/>
+    <property name="drivers_and_vehicles_is_debugging"  description="drivers_and_vehicles_is_debugging" defaultValue="${DriversAndVehiclesIsDebugging}$"/>
+    <property name="public_transportation_reports_path"  description="public_transportation_reports_path" defaultValue="${publicTransportationReportPath}$"/>
 </mfp:adapter>

@@ -6,8 +6,8 @@
  */
 //Adapter Constants
 var adapterName = "IAMServicesAdapter";
-var WSSE_USERNAME = MFP.Server.getPropertyValue("tokens.tipcoService.username"];
-var WSSE_PASSWORD = MFP.Server.getPropertyValue("tokens.tipcoService.password"];
+var WSSE_USERNAME = MFP.Server.getPropertyValue("tokens.tipcoService.username");
+var WSSE_PASSWORD = MFP.Server.getPropertyValue("tokens.tipcoService.password");
 
 
 //Helpers Functions

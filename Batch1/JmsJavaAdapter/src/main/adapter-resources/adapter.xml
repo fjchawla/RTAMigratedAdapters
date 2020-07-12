@@ -13,11 +13,11 @@
     </connectivity>
     <procedure name="getAllMessages" />
 	
-	<property name="jmsQueue.url"  description="jmsQueue.url" defaultValue="tcp://RTAMHTIBSTGEMS1.RTATESTDOM.LOCAL:7222"/>
-	<property name="jmsQueue.name"  description="jmsQueue.name" defaultValue="RTA.ESB.Public.Mobile.PushNotification"/>
-	<property name="jmsQueue.username"  description="jmsQueue.username" defaultValue="MobStgEmsUser"/>
-	<property name="jmsQueue.password"  description="jmsQueue.password" defaultValue="M)b!le@123"/>
-	<property name="tokens.jmsAdapter"  description="tokens.jmsAdapter" defaultValue="M)b!le@12345"/>
+	<property name="jmsQueue.url"  description="jmsQueue.url" defaultValue="${jmsQueueUrl}$"/>
+	<property name="jmsQueue.name"  description="jmsQueue.name" defaultValue="${jmsQueueName}$"/>
+	<property name="jmsQueue.username"  description="jmsQueue.username" defaultValue="${jmsQueueUsername}$"/>
+	<property name="jmsQueue.password"  description="jmsQueue.password" defaultValue="${jmsQueuePassword}$"/>
+	<property name="tokens.jmsAdapter"  description="tokens.jmsAdapter" defaultValue="${tokenjmsAdapter}$"/>
 	
 	
 </mfp:adapter>

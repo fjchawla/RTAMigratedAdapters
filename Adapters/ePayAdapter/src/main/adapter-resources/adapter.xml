@@ -4,8 +4,8 @@
     <connectivity>
         <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
             <protocol>http</protocol>
-            <domain>172.27.64.170</domain>
-            <port>11088</port>
+            <domain>${rtamhtibstgamx1rtatestdomlocal}$</domain>
+            <port>${rtamhtibstgamx1rtatestdomlocalport11088}$</port>
             <connectionTimeoutInMilliseconds>60000</connectionTimeoutInMilliseconds>
             <socketTimeoutInMilliseconds>60000</socketTimeoutInMilliseconds>
             <maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>

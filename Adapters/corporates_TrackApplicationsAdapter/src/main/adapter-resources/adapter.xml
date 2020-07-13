@@ -4,8 +4,8 @@
     <connectivity>
         <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
             <protocol>https</protocol>
-            <domain>intstg.rta.ae</domain>
-            <port>11046</port>
+            <domain>${intstgrtaae}$</domain>
+            <port>${intstgrtaaeport}$</port>
             <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
             <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
             <maxConcurrentConnectionsPerNode>2</maxConcurrentConnectionsPerNode>

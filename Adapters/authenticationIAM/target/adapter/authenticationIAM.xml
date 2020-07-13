@@ -10,9 +10,9 @@
 		<connectionPolicy xmlns:ns4="http://www.ibm.com/mfp/integration/http" 
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:HTTPConnectionPolicyType">
 			<protocol>https</protocol>
-			<!-- <domain>RTAMHTIBSTGEMS1.rtatestdom.local</domain>
-			<port>11082</port> -->
-			<domain>EIPTIBAM2.RTA.GLOBAL</domain>
+			<!-- <domain>${rtamhtibstgems1rtatestdomlocal}$</domain>
+			<port>${eiptibamrtaglobalport11082}$</port> -->
+			<domain>${eiptibam2rtaglobal}$</domain>
 			<port>21012</port>
 			<connectionTimeoutInMilliseconds>180000</connectionTimeoutInMilliseconds>
 			<socketTimeoutInMilliseconds>180000</socketTimeoutInMilliseconds>

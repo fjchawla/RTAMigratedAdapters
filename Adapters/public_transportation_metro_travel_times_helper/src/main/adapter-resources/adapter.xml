@@ -4,8 +4,8 @@
     <connectivity>
         <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
             <protocol>http</protocol>
-            <domain>localhost</domain>
-            <port>80</port>
+            <domain>${localhost}$</domain>
+            <port>${localhostport}$</port>
             <connectionTimeoutInMilliseconds>50000</connectionTimeoutInMilliseconds>
             <socketTimeoutInMilliseconds>50000</socketTimeoutInMilliseconds>
             <maxConcurrentConnectionsPerNode>2</maxConcurrentConnectionsPerNode>

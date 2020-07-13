@@ -4,8 +4,8 @@
     <connectivity>
         <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
             <protocol>https</protocol>
-            <domain>maps.googleapis.com</domain>
-            <port>443</port>
+            <domain>${mapsgoogleapiscom}$</domain>
+            <port>${developeribmcomport}$</port>
             <connectionTimeoutInMilliseconds>120000</connectionTimeoutInMilliseconds>
             <socketTimeoutInMilliseconds>120000</socketTimeoutInMilliseconds>
             <maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>

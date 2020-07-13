@@ -4,8 +4,8 @@
     <connectivity>
         <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
             <protocol>https</protocol>
-            <domain>rtamhtibstgamx1.rtatestdom.local</domain>
-            <port>11000</port>
+            <domain>${rtamhtibstgamx1rtatestdomlocal}$</domain>
+            <port>${rtamhtibstgamx1rtatestdomlocalport11000}$</port>
             <connectionTimeoutInMilliseconds>60000</connectionTimeoutInMilliseconds>
             <socketTimeoutInMilliseconds>60000</socketTimeoutInMilliseconds>
             <maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>

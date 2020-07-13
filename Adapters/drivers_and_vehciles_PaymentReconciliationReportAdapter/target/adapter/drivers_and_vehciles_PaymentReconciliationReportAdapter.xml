@@ -4,8 +4,8 @@
     <connectivity>
         <connectionPolicy xmlns:ns4="http://www.ibm.com/mfp/integration/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:HTTPConnectionPolicyType">
             <protocol>https</protocol>
-            <domain>test12c</domain>
-            <port>7783</port>
+            <domain>${test12c}$</domain>
+            <port>${test12c7783}$</port>
             <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
             <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
             <maxConcurrentConnectionsPerNode>200</maxConcurrentConnectionsPerNode>

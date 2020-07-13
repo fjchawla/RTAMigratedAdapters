@@ -11,8 +11,8 @@
     <connectivity>
         <connectionPolicy xmlns:ns4="http://www.ibm.com/mfp/integration/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:HTTPConnectionPolicyType">
             <protocol>http</protocol>
-            <domain>localhost</domain>
-            <port>80</port>
+            <domain>${localhost}$</domain>
+            <port>${localhostport}$</port>
         </connectionPolicy>
         <!--<loadConstraints maxConcurrentConnectionsPerNode="2" /> Element loadConstraint was removed as it is no longer supported. For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
     </connectivity>

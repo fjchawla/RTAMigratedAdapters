@@ -4,8 +4,8 @@
     <connectivity>
         <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
             <protocol>https</protocol>
-            <domain>Eiptibam.RTA.GLOBAL</domain>
-            <port>11080</port>
+            <domain>${eiptibamrtaglobal}$</domain>
+            <port>${rtamhtibstgamxlrtatestdomlocalport}$</port>
             <connectionTimeoutInMilliseconds>60000</connectionTimeoutInMilliseconds>
             <socketTimeoutInMilliseconds>60000</socketTimeoutInMilliseconds>
             <maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>

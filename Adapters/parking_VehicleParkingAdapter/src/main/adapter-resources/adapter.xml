@@ -4,8 +4,8 @@
     <connectivity>
         <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
             <protocol>http</protocol>
-            <domain>86.96.192.57</domain>
-            <port>80</port>
+            <domain>${parkingaddMpayPendingTxnIp}$</domain>
+            <port>${localhostport}$</port>
             <connectionTimeoutInMilliseconds>5000</connectionTimeoutInMilliseconds>
             <socketTimeoutInMilliseconds>5000</socketTimeoutInMilliseconds>
             <maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>

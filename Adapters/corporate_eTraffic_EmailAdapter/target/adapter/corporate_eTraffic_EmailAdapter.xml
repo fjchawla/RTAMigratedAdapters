@@ -4,8 +4,8 @@
     <connectivity>
         <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
             <protocol>http</protocol>
-            <domain>rss.cnn.com</domain>
-            <port>80</port>
+            <domain>${rsscnncom}$</domain>
+            <port>${localhostport}$</port>
             <connectionTimeoutInMilliseconds>480000</connectionTimeoutInMilliseconds>
             <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
             <maxConcurrentConnectionsPerNode>2</maxConcurrentConnectionsPerNode>

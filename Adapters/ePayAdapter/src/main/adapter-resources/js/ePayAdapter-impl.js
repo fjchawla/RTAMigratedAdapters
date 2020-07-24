@@ -843,9 +843,16 @@ function getTransactionStatusWithoutRecording(spCode, servCode, spTrn) {
 
 function getTransactionStatusInternal(userId, spCode, servCode, spTrn, token) {
 	try {
+		adapterLogger("getTransactionStatusInternal","info", "Failed",toString(userId));
+		adapterLogger("getTransactionStatusInternal","info", "Failed",toString(spCode));
+		adapterLogger("getTransactionStatusInternal","info", "Failed",toString(servCode));
+		adapterLogger("getTransactionStatusInternal","info", "Failed",toString(spTrn));
+		adapterLogger("getTransactionStatusInternal","info", "Failed",toString(token));
 		if (token == REQ_RECENT_ACTIVITIES_TOKEN) {
 			spCode = MFP.Server.getPropertyValue("epay.DSGOptions.SPCODE");
 			servCode = MFP.Server.getPropertyValue("epay.DSGOptions.SERVCODE");
+			adapterLogger("getTransactionStatusInternal","info", "Failed",toString(spCode));
+			adapterLogger("getTransactionStatusInternal","info", "Failed",toString(servCode));
 			var reqResult = ePayQueryTransactionStatus(spTrn);
 			if (reqResult.isSuccessful == false) {
 				//MFP.Logger.info("|ePayAdapter |getTransactionStatusInternal |Failed");

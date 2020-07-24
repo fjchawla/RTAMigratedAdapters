@@ -25,7 +25,7 @@
 	<property name="epay.Encryption.PASSWORD.RTA_Dubai"  description="epay.Encryption.PASSWORD." defaultValue="${EncryptionPasswordRTADubai}$"/>
 	<property name="epay.DSGOptions.SPCODE"  description="epay.DSGOptions.SPCODE" defaultValue="${DSGOptionsSPCODE}$"/>
 	<property name="epay.Encryption.ENFORCE_ENCRYPTION"  description="epay.Encryption.ENFORCE_ENCRYPTION" defaultValue="${EncryptionEnforceEncryption}$"/>
-	 
+	 <property name="tokens.recentActivities"  description="tokens.recentActivities" defaultValue="${tokenRecentActivities}$"/>
 	<property name="epay.LegacyApps.COUNT"  description="epay.LegacyApps.COUNT" defaultValue="${LegacyAppsCount}$"/>
 	<property name="epay.LegacyApps.APP0"  description="epay.LegacyApps.APP0" defaultValue="${LegacyApp0}$"/>
 	<property name="epay.LegacyApps.APP1"  description="epay.LegacyApps.APP1" defaultValue="${LegacyApp1}$"/>

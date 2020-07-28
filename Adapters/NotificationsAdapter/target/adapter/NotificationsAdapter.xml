@@ -29,16 +29,16 @@
 
 	<!-- Replace this with appropriate procedures -->
 	
-	<procedure name="SendNotificationByTag" scope="wl_unprotected"/>
-	<procedure name="InsertNotification" scope="wl_unprotected"/>
-	<procedure name="GetAllNotifications" scope="wl_unprotected"/>
-	<procedure name="getLast30DaysNotifications" scope="wl_unprotected"/>
+	<procedure name="SendNotificationByTag"/>
+	<procedure name="InsertNotification"/>
+	<procedure name="GetAllNotifications"/>
+	<procedure name="getLast30DaysNotifications"/>
 	
-	<procedure name="insertUserPreferredLocation" scope="wl_unprotected"/>
-	<procedure name="SelectByUserId" scope="wl_unprotected"/>
-	<procedure name="getAllPreferredLocations" scope="wl_unprotected"/>
-	<procedure name="SendUserNotification" scope="wl_unprotected"/>
-	<procedure name="deletePreferredLocation" scope="wl_unprotected"/>
+	<procedure name="insertUserPreferredLocation"/>
+	<procedure name="SelectByUserId"/>
+	<procedure name="getAllPreferredLocations"/>
+	<procedure name="SendUserNotification"/>
+	<procedure name="deletePreferredLocation"/>
 	
 	
 	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>

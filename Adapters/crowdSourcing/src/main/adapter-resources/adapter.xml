@@ -24,26 +24,26 @@
 		</connectionPolicy>
 	</connectivity>
 
-<procedure name="insertQuesAnswers" scope="wl_unprotected" />
-<procedure name="allQuesAnswers" scope="wl_unprotected" />
-<procedure name="allVotes" scope="wl_unprotected" />
-<procedure name="allconfig" scope="wl_unprotected" />
+<procedure name="insertQuesAnswers"/>
+<procedure name="allQuesAnswers"/>
+<procedure name="allVotes"/>
+<procedure name="allconfig"/>
 
-<procedure name="getProposedBusRoutes" scope="wl_unprotected" />
-<procedure name="getKMLFile" scope="wl_unprotected" />
-<procedure name="getQuestionsByCategoryId" scope="wl_unprotected" />
-<procedure name="submitAnswers" scope="wl_unprotected" />
-<procedure name="getVotesReportById" scope="wl_unprotected" />
-<procedure name="getPagnationVotes" scope="wl_unprotected" />
-<procedure name="crowdSourcingLogin" scope="wl_unprotected" />
-<procedure name="googleMapKey" scope="wl_unprotected" />
-<procedure name="generateReport" scope="wl_unprotected" />
-<procedure name="getReportData" scope="wl_unprotected" />
-<procedure name="DeleteAll" scope="wl_unprotected" />
-<procedure name="generateFinalReport" scope="wl_unprotected" />
+<procedure name="getProposedBusRoutes"/>
+<procedure name="getKMLFile"/>
+<procedure name="getQuestionsByCategoryId"/>
+<procedure name="submitAnswers"/>
+<procedure name="getVotesReportById"/>
+<procedure name="getPagnationVotes"/>
+<procedure name="crowdSourcingLogin"/>
+<procedure name="googleMapKey"/>
+<procedure name="generateReport"/>
+<procedure name="getReportData"/>
+<procedure name="DeleteAll"/>
+<procedure name="generateFinalReport"/>
 
-<procedure name="deletecCurrentReport" scope="wl_unprotected" />
-<procedure name="getRepoertData" scope="wl_unprotected" />
-<procedure name="getAllVotes" scope="wl_unprotected" />
+<procedure name="deletecCurrentReport"/>
+<procedure name="getRepoertData"/>
+<procedure name="getAllVotes"/>
 
 </mfp:adapter>

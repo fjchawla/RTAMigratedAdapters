@@ -16,7 +16,7 @@
         </connectionPolicy>
         <!--<loadConstraints maxConcurrentConnectionsPerNode="2" /> Element loadConstraint was removed as it is no longer supported. For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
     </connectivity>
-    <procedure name="verifyData" scope="wl_unprotected"/>
+    <procedure name="verifyData"/>
     <procedure name="encryptData"/>
 	
 	<property name="epay.Encryption.STRENGTH"  description="epay.Encryption.STRENGTH" defaultValue="${EncryptionStrength}$"/>

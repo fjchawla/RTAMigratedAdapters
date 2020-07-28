@@ -19,8 +19,8 @@
 			<maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>
 		</connectionPolicy>
 	</connectivity>
-	<procedure name="authenticate" scope="wl_unprotected" />
-	<procedure name="onLogout" scope="wl_unprotected" />
+	<procedure name="authenticate"/>
+	<procedure name="onLogout"/>
 	
 	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>
     <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="${tipcoServicePassword}$"/>

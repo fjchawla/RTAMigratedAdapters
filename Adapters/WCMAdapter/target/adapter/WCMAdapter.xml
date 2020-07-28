@@ -23,13 +23,13 @@
 		</connectionPolicy>
 	</connectivity>
 
-	<procedure name="getAboutRTA" scope="wl_unprotected"/>
-	<procedure name="getTermsAndConditions" scope="wl_unprotected"/>
-	<procedure name="getHelpTopics" scope="wl_unprotected"/>
-	<procedure name="getPartnerWebsites" scope="wl_unprotected"/>
-	<procedure name="getPrivacyContent" scope="wl_unprotected"/>
-	<procedure name="getNewPrivacyContent" scope="wl_unprotected"/>
-	<procedure name="getNewTermsAndConditions" scope="wl_unprotected"/>
-	<procedure name="getHelpTopicsByAppName" scope="wl_unprotected"/>
+	<procedure name="getAboutRTA"/>
+	<procedure name="getTermsAndConditions"/>
+	<procedure name="getHelpTopics"/>
+	<procedure name="getPartnerWebsites"/>
+	<procedure name="getPrivacyContent"/>
+	<procedure name="getNewPrivacyContent"/>
+	<procedure name="getNewTermsAndConditions"/>
+	<procedure name="getHelpTopicsByAppName"/>
 
 </mfp:adapter>

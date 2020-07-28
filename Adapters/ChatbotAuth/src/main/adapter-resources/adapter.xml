@@ -23,7 +23,7 @@
 		</connectionPolicy>
 	</connectivity>
 
-	<procedure name="getAdapterData" scope="wl_unprotected"/>
+	<procedure name="getAdapterData"/>
 	
 	<property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="${portalVendorUsername}$"/>
 	<property name="tokens.portal.vendorPassword"  description="tokens.portal.vendorPassword" defaultValue="${portalVendorPassword}$"/>

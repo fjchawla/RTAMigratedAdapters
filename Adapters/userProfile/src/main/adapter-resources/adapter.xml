@@ -10,18 +10,18 @@
             <dataSourceJNDIName>smartgov/jdbc/CommonShellDS</dataSourceJNDIName>
         </connectionPolicy>
     </connectivity>
-    <procedure name="getUserProfile" scope="wl_unprotected"/>
-    <procedure name="getUserInfo" scope="wl_unprotected"/>
-    <procedure name="setUserInfo" scope="wl_unprotected"/>
-    <procedure name="setUserInfoForPortal" scope="wl_unprotected"/>
-    <procedure name="setUserInfoForProfile" scope="wl_unprotected"/>
-    <procedure name="setUserMobile" scope="wl_unprotected"/>
-    <procedure name="setUserMail" scope="wl_unprotected"/>
+    <procedure name="getUserProfile"/>
+    <procedure name="getUserInfo"/>
+    <procedure name="setUserInfo"/>
+    <procedure name="setUserInfoForPortal"/>
+    <procedure name="setUserInfoForProfile"/>
+    <procedure name="setUserMobile"/>
+    <procedure name="setUserMail"/>
     <procedure name="deleteUserInfo" scope="servicesTest"/>
     <procedure name="getUserNotifications" scope="servicesTest"/>
     <procedure name="updateUserNotifications" scope="servicesTest"/>
     <procedure name="setUserNotificationReadFlag" scope="servicesTest"/>
-    <procedure name="setUserNotification" scope="wl_unprotected"/>
+    <procedure name="setUserNotification"/>
     <procedure name="deleteUserNotification" scope="servicesTest"/>
     <procedure name="deleteUserNotifications" scope="servicesTest"/>
     <procedure name="getUserWidgets" scope="servicesTest"/>
@@ -33,57 +33,57 @@
     <procedure name="deleteUserFavoriteService" scope="servicesTest"/>
     <procedure name="deleteUserFavoriteServices" scope="servicesTest"/>
     <procedure name="updateUserFavoriteServices" scope="servicesTest"/>
-    <procedure name="getUserLatestRecentActivitiesPortal" scope="wl_unprotected"/>
+    <procedure name="getUserLatestRecentActivitiesPortal"/>
     <procedure name="getAllRecentActivitiesByDates" scope="servicesTest"/>
-    <procedure name="getAllRecentActivitiesByDate" scope="wl_unprotected"/>
-    <procedure name="getAllNonFinalizedRecentActivitiesByDate" scope="wl_unprotected"/>
+    <procedure name="getAllRecentActivitiesByDate"/>
+    <procedure name="getAllNonFinalizedRecentActivitiesByDate"/>
     <procedure name="getRecentActivitiesTotalEPay" scope="servicesTest"/>
     <procedure name="getRecentActivitiesTotalMPay" scope="servicesTest"/>
     <procedure name="getRecentActivitiesServiceProviders" scope="servicesTest"/>
     <procedure name="getRecentActivitiesServiceCodes" scope="servicesTest"/>
     <procedure name="getRecentActivitiesStatus" scope="servicesTest"/>
-    <procedure name="setUserRecentActivity" scope="wl_unprotected"/>
-    <procedure name="updateUserRecentActivity" scope="wl_unprotected"/>
-    <procedure name="updateUserRecentActivityCheckStep" scope="wl_unprotected"/>
-    <procedure name="updateUserRecentActivityTokenWithStatus" scope="wl_unprotected"/>
+    <procedure name="setUserRecentActivity"/>
+    <procedure name="updateUserRecentActivity"/>
+    <procedure name="updateUserRecentActivityCheckStep"/>
+    <procedure name="updateUserRecentActivityTokenWithStatus"/>
     <procedure name="deleteUserRecentActivity" scope="servicesTest"/>
     <procedure name="deleteUserRecentActivities" scope="servicesTest"/>
     <procedure name="getUserOtherAccounts" scope="servicesTest"/>
     <procedure name="setUserOtherAccount" scope="servicesTest"/>
-    <procedure name="setUserOtherAccountPortal" scope="wl_unprotected"/>
-    <procedure name="deleteUserOtherAccountPortal" scope="wl_unprotected"/>
+    <procedure name="setUserOtherAccountPortal"/>
+    <procedure name="deleteUserOtherAccountPortal"/>
     <procedure name="deleteUserOtherAccount" scope="servicesTest"/>
     <procedure name="deleteUserOtherAccounts" scope="servicesTest"/>
     <procedure name="getUserNotificationsCoun" scope="servicesTest"/>
     <procedure name="getUserNotificationsFromTimeStamp" scope="servicesTest"/>
     <procedure name="getUserNotificationsWithLimit" scope="servicesTest"/>
     <procedure name="getUserServiceFeedbacks" scope="servicesTest"/>
-    <procedure name="setUserServiceFeedback" scope="wl_unprotected"/>
+    <procedure name="setUserServiceFeedback"/>
     <procedure name="deleteUserServiceFeedback" scope="servicesTest"/>
     <procedure name="deleteUserServiceFeedbacks" scope="servicesTest"/>
-    <procedure name="getCache" scope="wl_unprotected"/>
-    <procedure name="setCache" scope="wl_unprotected"/>
-    <procedure name="deleteCache" scope="wl_unprotected"/>
-    <procedure name="getStaticPage" scope="wl_unprotected"/>
+    <procedure name="getCache"/>
+    <procedure name="setCache"/>
+    <procedure name="deleteCache"/>
+    <procedure name="getStaticPage"/>
     <procedure name="setStaticPage" scope="servicesTest"/>
     <procedure name="deleteStaticPage" scope="servicesTest"/>
-    <procedure name="reconciliation" scope="wl_unprotected"/>
-    <procedure name="getWCMNEWSBYID" scope="wl_unprotected"/>
-    <procedure name="getWCMNEWSWITHLIMIT" scope="wl_unprotected"/>
-    <procedure name="setWCMNEWS" scope="wl_unprotected"/>
-    <procedure name="getWCMPROJECTSBYID" scope="wl_unprotected"/>
-    <procedure name="getWCMPROJECTSWITHLIMIT" scope="wl_unprotected"/>
-    <procedure name="setWCMPROJECTS" scope="wl_unprotected"/>
-    <procedure name="getWCMANNOUNCEMENTSBYID" scope="wl_unprotected"/>
-    <procedure name="getWCMANNOUNCEMENTSWITHLIMIT" scope="wl_unprotected"/>
-    <procedure name="setWCMANNOUNCEMENTS" scope="wl_unprotected"/>
-    <procedure name="setSalikAccount" scope="wl_unprotected"/>
-    <procedure name="getSalikAccount" scope="wl_unprotected"/>
-    <procedure name="addOTPToDB" scope="wl_unprotected"/>
-    <procedure name="verifyOTP" scope="wl_unprotected"/>
+    <procedure name="reconciliation"/>
+    <procedure name="getWCMNEWSBYID"/>
+    <procedure name="getWCMNEWSWITHLIMIT"/>
+    <procedure name="setWCMNEWS"/>
+    <procedure name="getWCMPROJECTSBYID"/>
+    <procedure name="getWCMPROJECTSWITHLIMIT"/>
+    <procedure name="setWCMPROJECTS"/>
+    <procedure name="getWCMANNOUNCEMENTSBYID"/>
+    <procedure name="getWCMANNOUNCEMENTSWITHLIMIT"/>
+    <procedure name="setWCMANNOUNCEMENTS"/>
+    <procedure name="setSalikAccount"/>
+    <procedure name="getSalikAccount"/>
+    <procedure name="addOTPToDB"/>
+    <procedure name="verifyOTP"/>
     <procedure name="isUserVip" scope="servicesTest"/>
-    <procedure name="updateNotifiedVIPUser" scope="wl_unprotected"/>
-    <procedure name="getVIPUser" scope="wl_unprotected"/>
+    <procedure name="updateNotifiedVIPUser"/>
+    <procedure name="getVIPUser"/>
 	
 	
 	

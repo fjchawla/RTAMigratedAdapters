@@ -23,8 +23,8 @@
 		</connectionPolicy>
 	</connectivity>
 
-	<procedure name="authenticate" scope="wl_unprotected"/>
-	<procedure name="getAdapterData" scope="wl_unprotected"/>
+	<procedure name="authenticate"/>
+	<procedure name="getAdapterData"/>
 
 	<property name="tokens.portal.username"  description="tokens.portal.username" defaultValue="${tokensPortalUsername}$"/>
 	<property name="tokens.portal.password"  description="tokens.portal.password" defaultValue="${tokensPortalPassword}$"/>

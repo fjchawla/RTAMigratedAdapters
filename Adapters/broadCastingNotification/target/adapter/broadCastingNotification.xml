@@ -11,7 +11,7 @@
             <maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
         </connectionPolicy>
     </connectivity>
-    <procedure name="sendBroadcastNotification" scope="wl_unprotected" />
+    <procedure name="sendBroadcastNotification"/>
 	
 	
 	<property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="${portalVendorUsername}$"/>

@@ -19,6 +19,8 @@
 	<property name="wsse.tibco.password"  description="wsse.tibco.password" defaultValue="${wsseTibcoPassword}$"/>
 	<property name="rta.pt.nolCardTopUpService.endPoint"  description="rta.pt.nolCardTopUpService.endPoint" defaultValue="${rtaPtNolCardTopUpServiceEndPoint}$"/>
 	<property name="rta.image.nolTempPath"  description="rta.image.nolTempPath" defaultValue="${rtaImageNolTempPath}$"/>
-	
+	<property name="rta.pt.nolResourcesService.endPoint"  description="rta.pt.nolResourcesService.endPoint" defaultValue="${rtaPtNolResourcesServiceEndPoint}$"/>
+
+    
 	
 </mfp:adapter>

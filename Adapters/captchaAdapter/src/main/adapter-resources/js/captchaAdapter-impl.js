@@ -57,6 +57,7 @@ var CaptchaSpeechConfigure={
 var mathOperations=Object.keys(CaptchaSpeechConfigure);
 
 function allQuestions(){
+	MFP.Logger.warn("CaptchAdapter - AllQuestions");
 	return MFP.Server.invokeSQLStatement({
 		preparedStatement : DB_TABLES['QUESTIONS'].sqlALL ,
 	});	

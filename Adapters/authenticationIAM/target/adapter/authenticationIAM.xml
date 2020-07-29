@@ -12,7 +12,7 @@
 			<protocol>https</protocol>
 			<!-- <domain>${rtamhtibstgems1rtatestdomlocal}$</domain>
 			<port>${eiptibamrtaglobalport11082}$</port> -->
-			<domain>${eiptibam2rtaglobal}$</domain>
+			<domain>${rtamhtibstgamx1rtatestdomlocal}$</domain>
 			<port>21012</port>
 			<connectionTimeoutInMilliseconds>180000</connectionTimeoutInMilliseconds>
 			<socketTimeoutInMilliseconds>180000</socketTimeoutInMilliseconds>

@@ -4,7 +4,7 @@
     <connectivity>
         <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
             <protocol>https</protocol>
-            <domain>${eiptibamrtaglobal}$</domain>
+            <domain>${rtamhtibstgamx1rtatestdomlocal}$</domain>
             <port>${eiptibamrtaglobalport11062}$</port>
             <connectionTimeoutInMilliseconds>90000</connectionTimeoutInMilliseconds>
             <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>

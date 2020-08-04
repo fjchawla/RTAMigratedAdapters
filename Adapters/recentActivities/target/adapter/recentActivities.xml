@@ -11,7 +11,7 @@
             <maxConcurrentConnectionsPerNode>2</maxConcurrentConnectionsPerNode>
         </connectionPolicy>
     </connectivity>
-    <procedure name="getRecentActivities" scope="masterAuthSecurityCheck" />
+    <procedure name="getRecentActivities" scope="IAMUAEPASS" />
 	
 	<property name="tokens.portal.vendorUsername"  description="tokens.portal.vendorUsername" defaultValue="${portalVendorUsername}$"/>
 	<property name="tokens.portal.vendorPassword"  description="tokens.portal.vendorPassword" defaultValue="${portalVendorPassword}$"/>

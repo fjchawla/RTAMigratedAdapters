@@ -12,7 +12,7 @@
         </connectionPolicy>
     </connectivity>
     <procedure name="isCorporateUser" />
-    <procedure name="getUserProfile" scope="masterAuthSecurityCheck" />
+    <procedure name="getUserProfile" scope="IAMUAEPASS" />
 
     <property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>
     <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="${tipcoServicePassword}$"/>

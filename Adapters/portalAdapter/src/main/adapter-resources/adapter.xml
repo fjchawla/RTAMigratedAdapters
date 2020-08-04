@@ -14,14 +14,14 @@
     <procedure name="getUserProfile" />
     <procedure name="getUserProfileV2" />
     <procedure name="getUserInfoForOTP" />
-    <procedure name="userActivation" scope="wl_directUpdate wl_deviceNoProvisioning AMAdapterAuth" />
-    <procedure name="linkEmiratesId" scope="wl_directUpdate masterAuth" />
-    <procedure name="updateMobileNumber" scope="wl_directUpdate masterAuth" />
+    <procedure name="userActivation" scope="IAMUAEPASS" />
+    <procedure name="linkEmiratesId" scope="IAMUAEPASS" />
+    <procedure name="updateMobileNumber" scope="IAMUAEPASS" />
     <procedure name="updateMail" />
     <procedure name="getUserProfileByEmiratesIdInternal" />
-    <procedure name="updateUserProfile" scope="wl_directUpdate masterAuth" />
+    <procedure name="updateUserProfile" scope="IAMUAEPASS" />
     <procedure name="forgetPassword" />
-    <procedure name="resetPassword" scope="wl_directUpdate masterAuth" />
+    <procedure name="resetPassword" scope="IAMUAEPASS" />
     <procedure name="checkUserAvailability" />
     <procedure name="linkUAEPassId" />
 

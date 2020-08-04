@@ -12,7 +12,7 @@
         </connectionPolicy>
     </connectivity>
     <procedure name="encryptData" />
-	<procedure name="testData" scope="unprotected"/>
+	<procedure name="testData"/>
 	
 	
 	

@@ -10,19 +10,20 @@
 		<connectionPolicy xmlns:ns4="http://www.ibm.com/mfp/integration/http" 
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:HTTPConnectionPolicyType">
 			<protocol>https</protocol>
-			<!-- <domain>${rtamhtibstgems1rtatestdomlocal}$</domain>
-			<port>${eiptibamrtaglobalport11082}$</port> -->
-			<domain>${rtamhtibstgamx1rtatestdomlocal}$</domain>
-			<port>${eiptibam2rtaglobalport}$</port>
+			<!-- <domain>RTAMHTIBSTGEMS1.rtatestdom.local</domain>
+			<port>11082</port> -->
+			<domain>EIPTIBAM2.RTA.GLOBAL</domain>
+			<port>21012</port>
 			<connectionTimeoutInMilliseconds>180000</connectionTimeoutInMilliseconds>
 			<socketTimeoutInMilliseconds>180000</socketTimeoutInMilliseconds>
 			<maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>
 		</connectionPolicy>
 	</connectivity>
-	<procedure name="authenticate"/>
-	<procedure name="onLogout"/>
+	<procedure name="authenticate" secured="false"/>
+	<procedure name="onLogout" scope="wl_unprotected" />
+    <procedure name="userProfileHandlerByUID"/>
 	
-	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="${tipcoServiceUsername}$"/>
-    <property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="${tipcoServicePassword}$"/>
+	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="Mobstguser"/>
+	<property name="tokens.tipcoService.password"  description="tokens.tipcoService.password" defaultValue="1^p(4q!7jr*8"/>
 
 </ns2:adapter>

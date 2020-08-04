@@ -20,62 +20,90 @@ function onAuthRequired(headers, errorMessage) {
 	};
 }
 
+
+
+//userProfileHandlerByUID should be used to get UserProfileData
 function authenticate(userId, password, appID) {
-	try {
-		onLogout();
-//		WL.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
-//		WL.Logger.info("|authenticationIAM |authenticate |password: " + password);
-//		WL.Logger.info("|authenticationIAM |authenticate |appID: " + appID);
-		if (String.prototype.trim) {
-			userId=userId.trim();
-			//WL.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
-		}
-		var response = amAuthenticate(userId, password, appID);
-		if (response && response.isSuccessful && response.statusCode == 200) {
-			var authenticateUserResponse = response.Envelope.Body.authenticateUserResponse;
-			if (authenticateUserResponse.operationStatus == "SUCCESS") {
-				//to be removed the below part
-				var identity = {
-					userId: userId
-				};
-				WL.Server.setActiveUser("AMAdapterAuthRealm", identity);
-				return userProfileHandlerByUID(userId, appID);
-			} else {
-				// FAILED
-				WL.Logger.info("|authenticationIAM |authenticate |Failure I: " + authenticateUserResponse.description);
-				return {
-					name: 'authenticationIAM',
-					authRequired: true,
-					errorMessage: {
-						failure: {
-							failure: "Invalid Username or Password",
-							errorCode: "01"
-						}
-					}
-				};
-			}
-		} else {
-			WL.Logger.info("|authenticationIAM |authenticate |Failure II: " + JSON.stringify(response));
-			onLogout();
-			return onAuthRequired(null, response);
-		}
-	} catch (e) {
-		WL.Logger.error("|authenticationIAM |authenticate |catching Error: " + e);
-		onLogout();
-		return serverErrorHandler();
-	}
+     WL.Logger.error("|authenticationIAM |authenticate |userId: " + userId +"  password "+password+" appID "+appID);
+    try {
+         //Following line has been commented by IBM team. MFP v8 Migration
+      //  onLogout();
+        //        WL.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
+        //        WL.Logger.info("|authenticationIAM |authenticate |password: " + password);
+        //        WL.Logger.info("|authenticationIAM |authenticate |appID: " + appID);
+       // if (String.prototype.trim) {
+            //userId=userId.trim();
+            //WL.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
+       // }
+        WL.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
+        var response = amAuthenticate(userId, password, appID);
+        if (response && response.isSuccessful && response.statusCode == 200) {
+            var authenticateUserResponse = response.Envelope.Body.authenticateUserResponse;
+            if (authenticateUserResponse.operationStatus == "SUCCESS") {
+                
+                var identity = {
+                name: 'authenticationIAM',
+                userId: userId,
+                authRequired: false
+                };
+                //Following two lines has been commented by IBM team. MFP v8 Migration
+               // WL.Server.setActiveUser("AMAdapterAuthRealm", identity);
+                //return userProfileHandlerByUID(userId, appID);
+                 WL.Logger.error("|authenticationIAM |authenticate |identity: " + identity);
+                return identity;
+                
+            } else {
+                // FAILED
+                
+                WL.Logger.error("|authenticationIAM |authenticate |Failure I: " + authenticateUserResponse.description);
+                return {
+                name: 'authenticationIAM',
+                authRequired: true,
+                failure: {
+                failure: "Invalid Username or Password",
+                errorCode: "01"
+                    }
+                };
+            }
+        } else {
+            WL.Logger.error("|authenticationIAM |authenticate |Failure II: " + JSON.stringify(response));
+            //onLogout();
+           // return onAuthRequired(null, response);
+            return {
+            name: 'authenticationIAM',
+            authRequired: true,
+            userId: userId,
+            failure: {
+            failure: "Issues in connecting with Backend.",
+            errorCode: "02"
+            }
+            };
+        }
+    } catch (e) {
+        WL.Logger.error("|authenticationIAM |authenticate |catching Error: " + e);
+        //onLogout();
+        //return serverErrorHandler();
+        return {
+        name: 'authenticationIAM',
+        authRequired: true,
+        failure: {
+        failure: "Exception.",
+        errorCode: "03"
+        }
+        };
+    }
 }
 
 function amAuthenticate(userId, password, appId) {
 	try {
 		var request = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:user="http://www.rta.ae/schemas/UserAuthenticationService/UserAuthenticationServiceSchema.xsd">' + getSoapHeader() + '<soapenv:Body>' + ' <user:authenticateUserRequest>' + ' <user:appID>' + appId + '</user:appID>' + '  <user:loginId>' + userId + '</user:loginId>' + '  <user:currentPassword>' + password + '</user:currentPassword>' + '  </user:authenticateUserRequest>' + '  </soapenv:Body>' + '</soapenv:Envelope>';
-		WL.Logger.info("|authenticationIAM |authenticate |request: " + request);
+		WL.Logger.info("|amAuthenticate |authenticate |request: " + request);
 		var response = invokeWebService(request);
-		WL.Logger.info("|authenticationIAM |authenticate |response: " + JSON.stringify(response));
+		WL.Logger.info("|amAuthenticate |authenticate |response: " + JSON.stringify(response));
 		return response;
 	} catch (e) {
-		WL.Logger.error("|authenticationIAM |authenticate |catching Error : " + e);
-		onLogout();
+		WL.Logger.error("|amAuthenticate |authenticate |catching Error : " + e);
+		//onLogout();
 		return serverErrorHandler();
 	}
 }
@@ -155,7 +183,7 @@ function userProfileHandlerByUID(uid, appid) {
 				var identity = {
 					userId: user_id
 				};
-				WL.Server.setActiveUser("masterAuthRealm", identity);
+				//WL.Server.setActiveUser("masterAuthRealm", identity);
 				var trialsSetUserInfo = 2;
 				while (trialsSetUserInfo > 0) {
 					// Add/Update user profile in shell database
@@ -203,7 +231,7 @@ function userProfileHandlerByUID(uid, appid) {
 		return serverErrorHandler();
 	} catch (e) {
 		WL.Logger.error("|authenticationIAM |getUserProfile |catching Error : " + e);
-		onLogout();
+		//onLogout();
 		return serverErrorHandler();
 	}
 }

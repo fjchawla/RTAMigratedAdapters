@@ -88,7 +88,9 @@ public class IAMUAEPASS extends UserAuthenticationSecurityCheck {
             if(!username.isEmpty() && !password.isEmpty()) {
                 System.out.println("validateCredentials....going to call execute method "+authenticationType +" appID "+appID);
                 try {
-                    status = execute(username,password,"appID",authenticationType);
+                    //status = execute(username,password,"appID",authenticationType);
+                    //passing correct variable instead of static value "appID"
+                    status = execute(username,password,appID,authenticationType);
                      logger.info("UserLogin:  validateCredentials status: "+status);
                     System.out.println("validateCredentials received....status"+ status);
                     } catch (IllegalStateException e) {

@@ -382,6 +382,7 @@ function getUserProfile(uid, appid) {
 		//MFP.Logger.info("|portalAdapter |getUserProfile |response: " + JSON.stringify(response));
 		if (response && response.isSuccessful && response.statusCode == 200 && response.Envelope && response.Envelope.Body
 			&& response.Envelope.Body.getUserProfileReturn.userProfile != undefined) {
+			adapterLogger("getUserProfile", "info", "Soap Response Nationality for JAXB", response.Envelope.Body.getUserProfileReturn.userProfile.nationality);
 			var userProfile = response.Envelope.Body.getUserProfileReturn.userProfile;
 			if (!userProfile.nationality) {
 				response.Envelope.Body.getUserProfileReturn.userProfile.nationality = {

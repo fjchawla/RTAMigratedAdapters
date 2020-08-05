@@ -378,7 +378,10 @@ function getUserProfile(uid, appid) {
 		//MFP.Logger.info("|portalAdapter |getUserProfile |request: " + request );
 
 		var response = invokeWebService2(request);
+		
+		
 		adapterLogger("getUserProfile", "info", "Soap Response", toString(response));
+		return {"isSuccessful":true,"errors":[],"warnings":[],"info":[],"Envelope":{"Header":"","Body":{"getUserProfileReturn":{"userProfile":{"userId":"salik56","title":{"titleID":"1","titleEn":"Mr","titleAr":"السيد"},"firstName":"Salik","middleName":"Salik","lastName":"Salik","phoneNo":"","mobileNo":"971543069768","email":"isoft.dubai@gmail.com","language":"English","userType":"UM_PUBLICUSER","businessLicenseNo":"","nationality":{"nationalityID":"162","nationalityEn":"United Arab Emirates","nationalityAr":"الامارات العربيّة المتّحدة"},"emirate":{"emirateID":"4","emirateEn":"Dubai","emirateAr":"دبي"},"address":"","thirdParty":"No","prefLanguage":"English","prefComm":"Email","isEmailVerified":"true","isMobileVerified":"true","isEmiratesIdVerified":"false","serviceRelatedInfo":[{"serviceId":"MPARKING","linkingAttribute":"dcxvtjyxxf97154306976815785447166469fcddb5eddd54fa18797283c05a109c6glsdbjldjncqxkeojzmwfukuurochrwrs"},{"serviceId":"SALIK","linkingAttribute":"39C0246C-B9CF-44F3-97E2-A4AF20FF4782"}],"createdOn":"17-MAR-20","modifiedOn":"17-MAR-20"}}}},"statusCode":200,"statusReason":"OK","responseHeaders":{"Content-Type":"text/xml; charset=utf-8","Date":"Wed, 22 Apr 2020 13:12:41 GMT"},"responseTime":328,"totalTime":333};
 		//MFP.Logger.info("|portalAdapter |getUserProfile |response: " + JSON.stringify(response));
 		if (response && response.isSuccessful && response.statusCode == 200 && response.Envelope && response.Envelope.Body
 			&& response.Envelope.Body.getUserProfileReturn.userProfile != undefined) {

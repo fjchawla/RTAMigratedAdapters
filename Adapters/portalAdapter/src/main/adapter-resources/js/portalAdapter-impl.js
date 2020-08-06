@@ -151,8 +151,8 @@ function isUndefinedOrNull(v) {
 	return result;
 }
 function _isAuthorized(user_id) {
-	//var authUserIdentity = MFP.Server.getActiveUser("masterAuthRealm");
-	var authUserIdentity = MFP.Server.getAuthenticatedUser("masterAuthRealm");
+	//var authUserIdentity = MFP.Server.getAuthenticatedUser();
+	var authUserIdentity = MFP.Server.getAuthenticatedUser();
 	MFP.Logger.info("|_isAuthorized" + JSON.stringify(authUserIdentity));
 	if (authUserIdentity) {
 		var authUserId = authUserIdentity.userId;
@@ -813,7 +813,7 @@ function _isAuthorizedPortal(portal_username, portal_password) {
  */
 function _isAuthorized(user_id) {
 	try {
-		var authUserIdentity = MFP.Server.getActiveUser("masterAuthRealm");
+		var authUserIdentity = MFP.Server.getAuthenticatedUser();
 		//MFP.Logger.info("|_isAuthorized" +JSON.stringify(authUserIdentity));
 		adapterLogger("_isAuthorized", "info", "authUserIdentity", toString(authUserIdentity));
 

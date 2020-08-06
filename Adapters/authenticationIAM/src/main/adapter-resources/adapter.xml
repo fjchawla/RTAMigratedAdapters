@@ -20,7 +20,7 @@
 		</connectionPolicy>
 	</connectivity>
 	<procedure name="authenticate" secured="false"/>
-	<procedure name="onLogout" scope="wl_unprotected" />
+	<procedure name="onLogout"/>
     <procedure name="userProfileHandlerByUID"/>
 	
 	<property name="tokens.tipcoService.username"  description="tokens.tipcoService.username" defaultValue="Mobstguser"/>

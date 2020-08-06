@@ -2,10 +2,10 @@ var WSSE_USERNAME = MFP.Server.getPropertyValue("tokens.tipcoService.username");
 var WSSE_PASSWORD = MFP.Server.getPropertyValue("tokens.tipcoService.password");
 
 function onLogout(headers, errorMessage) {
-	/*WL.Server.setActiveUser("masterAuthRealm", null);
-	WL.Server.setActiveUser("AMAdapterAuthRealm", null);
-	WL.Server.setActiveUser("AdapterAuthRealm", null);
-	WL.Server.setActiveUser("UAEPassAdapterAuthRealm", null);*/
+	/*MFP.Server.setActiveUser("masterAuthRealm", null);
+	MFP.Server.setActiveUser("AMAdapterAuthRealm", null);
+	MFP.Server.setActiveUser("AdapterAuthRealm", null);
+	MFP.Server.setActiveUser("UAEPassAdapterAuthRealm", null);*/
 	return {
 		name: 'authenticationIAM'
 	};
@@ -24,18 +24,18 @@ function onAuthRequired(headers, errorMessage) {
 
 //userProfileHandlerByUID should be used to get UserProfileData
 function authenticate(userId, password, appID) {
-     WL.Logger.error("|authenticationIAM |authenticate |userId: " + userId +"  password "+password+" appID "+appID);
+     MFP.Logger.error("|authenticationIAM |authenticate |userId: " + userId +"  password "+password+" appID "+appID);
     try {
          //Following line has been commented by IBM team. MFP v8 Migration
       //  onLogout();
-        //        WL.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
-        //        WL.Logger.info("|authenticationIAM |authenticate |password: " + password);
-        //        WL.Logger.info("|authenticationIAM |authenticate |appID: " + appID);
+        //        MFP.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
+        //        MFP.Logger.info("|authenticationIAM |authenticate |password: " + password);
+        //        MFP.Logger.info("|authenticationIAM |authenticate |appID: " + appID);
        // if (String.prototype.trim) {
             //userId=userId.trim();
-            //WL.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
+            //MFP.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
        // }
-        WL.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
+        MFP.Logger.info("|authenticationIAM |authenticate |userId: " + userId);
         var response = amAuthenticate(userId, password, appID);
         if (response && response.isSuccessful && response.statusCode == 200) {
             var authenticateUserResponse = response.Envelope.Body.authenticateUserResponse;
@@ -47,15 +47,15 @@ function authenticate(userId, password, appID) {
                 authRequired: false
                 };
                 //Following two lines has been commented by IBM team. MFP v8 Migration
-               // WL.Server.setActiveUser("AMAdapterAuthRealm", identity);
+               // MFP.Server.setActiveUser("AMAdapterAuthRealm", identity);
                 //return userProfileHandlerByUID(userId, appID);
-                 WL.Logger.error("|authenticationIAM |authenticate |identity: " + identity);
+                 MFP.Logger.error("|authenticationIAM |authenticate |identity: " + identity);
                 return identity;
                 
             } else {
                 // FAILED
                 
-                WL.Logger.error("|authenticationIAM |authenticate |Failure I: " + authenticateUserResponse.description);
+                MFP.Logger.error("|authenticationIAM |authenticate |Failure I: " + authenticateUserResponse.description);
                 return {
                 name: 'authenticationIAM',
                 authRequired: true,
@@ -66,7 +66,7 @@ function authenticate(userId, password, appID) {
                 };
             }
         } else {
-            WL.Logger.error("|authenticationIAM |authenticate |Failure II: " + JSON.stringify(response));
+            MFP.Logger.error("|authenticationIAM |authenticate |Failure II: " + JSON.stringify(response));
             //onLogout();
            // return onAuthRequired(null, response);
             return {
@@ -80,7 +80,7 @@ function authenticate(userId, password, appID) {
             };
         }
     } catch (e) {
-        WL.Logger.error("|authenticationIAM |authenticate |catching Error: " + e);
+        MFP.Logger.error("|authenticationIAM |authenticate |catching Error: " + e);
         //onLogout();
         //return serverErrorHandler();
         return {
@@ -97,12 +97,12 @@ function authenticate(userId, password, appID) {
 function amAuthenticate(userId, password, appId) {
 	try {
 		var request = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:user="http://www.rta.ae/schemas/UserAuthenticationService/UserAuthenticationServiceSchema.xsd">' + getSoapHeader() + '<soapenv:Body>' + ' <user:authenticateUserRequest>' + ' <user:appID>' + appId + '</user:appID>' + '  <user:loginId>' + userId + '</user:loginId>' + '  <user:currentPassword>' + password + '</user:currentPassword>' + '  </user:authenticateUserRequest>' + '  </soapenv:Body>' + '</soapenv:Envelope>';
-		WL.Logger.info("|amAuthenticate |authenticate |request: " + request);
+		MFP.Logger.info("|amAuthenticate |authenticate |request: " + request);
 		var response = invokeWebService(request);
-		WL.Logger.info("|amAuthenticate |authenticate |response: " + JSON.stringify(response));
+		MFP.Logger.info("|amAuthenticate |authenticate |response: " + JSON.stringify(response));
 		return response;
 	} catch (e) {
-		WL.Logger.error("|amAuthenticate |authenticate |catching Error : " + e);
+		MFP.Logger.error("|amAuthenticate |authenticate |catching Error : " + e);
 		//onLogout();
 		return serverErrorHandler();
 	}
@@ -116,9 +116,9 @@ function userProfileHandlerByUID(uid, appid) {
 			procedure: 'getUserProfile',
 			parameters: [uid, appid]
 		};
-//		WL.Logger.info("|authenticationIAM |getUserProfile |invocationData: " + JSON.stringify(invocationData));
-		var response = WL.Server.invokeProcedure(invocationData);
-//		WL.Logger.info("|authenticationIAM |getUserProfile |server response: " + JSON.stringify(response));
+//		MFP.Logger.info("|authenticationIAM |getUserProfile |invocationData: " + JSON.stringify(invocationData));
+		var response = MFP.Server.invokeProcedure(invocationData);
+//		MFP.Logger.info("|authenticationIAM |getUserProfile |server response: " + JSON.stringify(response));
 		if (response && response.isSuccessful && response.statusCode == 200) {
 			onLogout();
 			var userProfile = response.Envelope.Body.getUserProfileReturn.userProfile;
@@ -183,7 +183,7 @@ function userProfileHandlerByUID(uid, appid) {
 				var identity = {
 					userId: user_id
 				};
-				//WL.Server.setActiveUser("masterAuthRealm", identity);
+				//MFP.Server.setActiveUser("masterAuthRealm", identity);
 				var trialsSetUserInfo = 2;
 				while (trialsSetUserInfo > 0) {
 					// Add/Update user profile in shell database
@@ -192,9 +192,9 @@ function userProfileHandlerByUID(uid, appid) {
 						procedure: 'setUserInfo',
 						parameters: [user_id, cn, title_ar, title_en, first_name_ar, first_name_en, middlename_ar, middlename_en, last_name_ar, last_name_en, date_of_birth, emiratesId, nationality_ar, nationality_en, mobile, mail, preferred_language, preferred_communication, portal_id, password_changed_flag, isEmailVerified, isMobileVerified, isEmiratesIdVerified, title_id, nationality_id, user_type, trafficNo]
 					};
-//					WL.Logger.info("|authenticationIAM |setUserInfo |invocationData: " + JSON.stringify(invocationData));
-					var shellDatabaseResponse = WL.Server.invokeProcedure(invocationData);
-//					WL.Logger.info("|authenticationIAM |setUserInfo |server response: " + JSON.stringify(shellDatabaseResponse));
+//					MFP.Logger.info("|authenticationIAM |setUserInfo |invocationData: " + JSON.stringify(invocationData));
+					var shellDatabaseResponse = MFP.Server.invokeProcedure(invocationData);
+//					MFP.Logger.info("|authenticationIAM |setUserInfo |server response: " + JSON.stringify(shellDatabaseResponse));
 					if (shellDatabaseResponse && shellDatabaseResponse.isSuccessful) {
 						trialsSetUserInfo = 0;
 						var trialsGetUserProfile = 2;
@@ -204,9 +204,9 @@ function userProfileHandlerByUID(uid, appid) {
 								procedure: 'getUserProfile',
 								parameters: [user_id]
 							};
-//							WL.Logger.info("|authenticationIAM |getUserProfile |invocationData: " + JSON.stringify(invocationData));
-							var fullUserProfileResponse = WL.Server.invokeProcedure(invocationData);
-							WL.Logger.info("|authenticationIAM |getUserProfile |server response: " + JSON.stringify(fullUserProfileResponse));
+//							MFP.Logger.info("|authenticationIAM |getUserProfile |invocationData: " + JSON.stringify(invocationData));
+							var fullUserProfileResponse = MFP.Server.invokeProcedure(invocationData);
+							MFP.Logger.info("|authenticationIAM |getUserProfile |server response: " + JSON.stringify(fullUserProfileResponse));
 							if (fullUserProfileResponse && fullUserProfileResponse.isSuccessful) {
 								trialsGetUserProfile = 0;
 								if(userProfile.serviceRelatedInfo)
@@ -230,7 +230,7 @@ function userProfileHandlerByUID(uid, appid) {
 		onLogout();
 		return serverErrorHandler();
 	} catch (e) {
-		WL.Logger.error("|authenticationIAM |getUserProfile |catching Error : " + e);
+		MFP.Logger.error("|authenticationIAM |getUserProfile |catching Error : " + e);
 		//onLogout();
 		return serverErrorHandler();
 	}
@@ -255,14 +255,14 @@ function invokeWebService(body, headers) {
 			contentType: 'text/xml; charset=utf-8'
 		}
 	};
-	return WL.Server.invokeHttp(input);
+	return MFP.Server.invokeHttp(input);
 }
 
 function setUserIdentity(user_id) {
 	var identity = {
 		userId: user_id
 	};
-	WL.Server.setActiveUser("masterAuthRealm", identity);
+	MFP.Server.setActiveUser("masterAuthRealm", identity);
 }
 
 function serverErrorHandler() {

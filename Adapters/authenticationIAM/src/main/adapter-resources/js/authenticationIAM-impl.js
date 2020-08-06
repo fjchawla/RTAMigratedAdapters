@@ -2,10 +2,10 @@ var WSSE_USERNAME = MFP.Server.getPropertyValue("tokens.tipcoService.username");
 var WSSE_PASSWORD = MFP.Server.getPropertyValue("tokens.tipcoService.password");
 
 function onLogout(headers, errorMessage) {
-	WL.Server.setActiveUser("masterAuthRealm", null);
+	/*WL.Server.setActiveUser("masterAuthRealm", null);
 	WL.Server.setActiveUser("AMAdapterAuthRealm", null);
 	WL.Server.setActiveUser("AdapterAuthRealm", null);
-	WL.Server.setActiveUser("UAEPassAdapterAuthRealm", null);
+	WL.Server.setActiveUser("UAEPassAdapterAuthRealm", null);*/
 	return {
 		name: 'authenticationIAM'
 	};

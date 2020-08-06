@@ -2795,6 +2795,10 @@ function getSalikAccount (user_id) {
  */
 function _isAuthorized(user_id) {
 	try{
+		return {
+				authRequired : false
+			};
+		//comented by  CS it must migration to version 8.0
 	var authUserIdentity = MFP.Server.getActiveUser("masterAuthRealm");
 	if (authUserIdentity) {
 		var authUserId = authUserIdentity.userId;

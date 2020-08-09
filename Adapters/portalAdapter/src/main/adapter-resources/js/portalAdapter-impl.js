@@ -355,7 +355,7 @@ function getUserProfileV2(uid, appid) {
 		return handleError(message_en, message_ar, 'RTA-CSHELL-ERROR-2', "getUserProfileV2");
 	}
 }
-function getUserProfile(uid, appid) {
+/*function getUserProfile(uid, appid) {
 	try {
 
 		if (!uid || !appid) {
@@ -426,11 +426,10 @@ function getUserProfile(uid, appid) {
 		return handleError(message_en, message_ar, 'RTA-CSHELL-ERROR-2', "getUserProfile");
 
 	}
-}
+}*/
 
-
-
-/*function getUserProfile(uid, appid) {
+// updated bt faran
+function getUserProfile(uid, appid) {
 	try {
 
 		if (!uid || !appid) {
@@ -454,21 +453,16 @@ function getUserProfile(uid, appid) {
 
 		var response = invokeWebService2(request);
 		
+		var strResponse = toString(response);
+		adapterLogger("getUserProfile=", "info", "Soap Response", strResponse);
 		
-		adapterLogger("getUserProfile=", "info", "Soap Response", toString(response));
-		adapterLogger("getUserProfile=", "info", "Stringify Response", JSON.stringify(response));
 		// this for testing only fixed response
+				
+		response = strResponse.replace(/{"":"http:\/\/www.rta.ae\/ActiveMatrix\/ESB\/schemas\/PortalProfileService\/Schema.xsd","CDATA":/g,"").replace(/"":"http:\/\/www.rta.ae\/ActiveMatrix\/ESB\/schemas\/PortalProfileService\/Schema.xsd",/g,"").replace(/{"":"http:\/\/www.rta.ae\/ActiveMatrix\/ESB\/schemas\/PortalProfileService\/Schema.xsd"}/g,"\"\"").replace(/},/g,",");
 		
-		strResponse = toString(response);
-		
-		strResponse = strResponse.replace("{\"\":\"http://www.rta.ae/ActiveMatrix/ESB/schemas/PortalProfileService/Schema.xsd\",\"CDATA\":","").replace("\"\":\"http://www.rta.ae/ActiveMatrix/ESB/schemas/PortalProfileService/Schema.xsd\",","").replace("\{\"\":\"http://www.rta.ae/ActiveMatrix/ESB/schemas/PortalProfileService/Schema.xsd\"\}","\"\"").replace("\},",",");
+		adapterLogger("getUserProfile=", "info", "Refined Response", response);
 		
 		
-		adapterLogger("getUserProfile=", "info", "Refined Response", strResponse);
-		
-		response = JSON.parse(strResponse);
-		
-		adapterLogger("getUserProfile=", "info", "JSON Parsed Response", toString(response));
 		
 		if (response && response.isSuccessful && response.statusCode == 200 && response.Envelope && response.Envelope.Body
 			&& response.Envelope.Body.getUserProfileReturn.userProfile != undefined) {
@@ -512,8 +506,7 @@ function getUserProfile(uid, appid) {
 		return handleError(message_en, message_ar, 'RTA-CSHELL-ERROR-2', "getUserProfile");
 
 	}
-}*/
-
+}
 
 function userActivation(uid) {
 	try {

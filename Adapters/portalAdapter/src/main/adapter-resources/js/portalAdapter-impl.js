@@ -355,7 +355,7 @@ function getUserProfileV2(uid, appid) {
 		return handleError(message_en, message_ar, 'RTA-CSHELL-ERROR-2', "getUserProfileV2");
 	}
 }
-function getUserProfile(uid, appid) {
+/*function getUserProfile(uid, appid) {
 	try {
 
 		if (!uid || !appid) {
@@ -426,7 +426,94 @@ function getUserProfile(uid, appid) {
 		return handleError(message_en, message_ar, 'RTA-CSHELL-ERROR-2', "getUserProfile");
 
 	}
+}*/
+
+
+
+function getUserProfile(uid, appid) {
+	try {
+
+		if (!uid || !appid) {
+			var errorMapping = handleSystemMessages('RTA-CSHELL-ERROR-1');
+			return handleError(errorMapping.message_en, errorMapping.message_ar, errorMapping.responseCode, "getUserProfile");
+		}
+		adapterLogger("getUserProfile", "info", "Adapter Input", toString([uid, appid]));
+		var request = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" '
+			+ 'xmlns:sch="http://www.rta.ae/ActiveMatrix/ESB/schemas/PortalProfileService/Schema.xsd" '
+			+ 'xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"'
+			+ ' xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">'
+			+ getSoapHeader()
+			+ '<soapenv:Body><sch:getUserProfile><sch:userId>'
+			+ uid
+			+ '</sch:userId><sch:applicationId>'
+			+ appid
+			+ '</sch:applicationId>'
+			+ '</sch:getUserProfile></soapenv:Body></soapenv:Envelope>';
+		adapterLogger("getUserProfile", "info", "Soap Request", toString(request));
+		//MFP.Logger.info("|portalAdapter |getUserProfile |request: " + request );
+
+		var response = invokeWebService2(request);
+		
+		
+		adapterLogger("getUserProfile=", "info", "Soap Response", toString(response));
+		adapterLogger("getUserProfile=", "info", "Stringify Response", JSON.stringify(response));
+		// this for testing only fixed response
+		
+		strResponse = toString(response);
+		
+		strResponse = strResponse.replace("{\"\":\"http://www.rta.ae/ActiveMatrix/ESB/schemas/PortalProfileService/Schema.xsd\",\"CDATA\":","").replace("\"\":\"http://www.rta.ae/ActiveMatrix/ESB/schemas/PortalProfileService/Schema.xsd\",","").replace("\{\"\":\"http://www.rta.ae/ActiveMatrix/ESB/schemas/PortalProfileService/Schema.xsd\"\}","\"\"").replace("\},",",");
+		
+		
+		adapterLogger("getUserProfile=", "info", "Refined Response", strResponse);
+		
+		response = JSON.parse(strResponse);
+		
+		adapterLogger("getUserProfile=", "info", "JSON Parsed Response", toString(response));
+		
+		if (response && response.isSuccessful && response.statusCode == 200 && response.Envelope && response.Envelope.Body
+			&& response.Envelope.Body.getUserProfileReturn.userProfile != undefined) {
+			adapterLogger("getUserProfile", "info", "Soap Response Nationality for JAXB", response.Envelope.Body.getUserProfileReturn.userProfile.nationality);
+			var userProfile = response.Envelope.Body.getUserProfileReturn.userProfile;
+			if (!userProfile.nationality) {
+				response.Envelope.Body.getUserProfileReturn.userProfile.nationality = {
+					nationalityID: "182",
+					nationalityEn: "other",
+					nationalityAr: "other"
+				}
+			}
+			if (userProfile.prefLanguage.toLowerCase() == "en")
+				userProfile.prefLanguage = "English";
+
+			if (userProfile.prefLanguage.toLowerCase() == "ar")
+				userProfile.prefLanguage = "Arabic";
+
+			if (userProfile.language.toLowerCase() == "en")
+				userProfile.language = "English";
+
+			if (userProfile.language.toLowerCase() == "ar")
+				userProfile.language = "Arabic";
+
+			if (userProfile.language.toLowerCase() == "ar")
+				userProfile.language = "Arabic";
+
+			if (userProfile.mobileNo == null || userProfile.mobileNo == "" || userProfile.mobileNo == undefined)
+				userProfile.mobileNo = "00";
+
+			if (userProfile.mobileNo.indexOf("+") != -1)
+				userProfile.mobileNo = userProfile.mobileNo.replace("+", "");
+		}
+		adapterLogger("getUserProfile", "info", "responseMOD", toString(response));
+		//		MFP.Logger.info("|portalAdapter |getUserProfile |responseMOD: " + JSON.stringify(response));
+		return response;
+	}
+	catch (e) {
+		adapterLogger("getUserProfile", "error", "Exception", toString(e));
+
+		return handleError(message_en, message_ar, 'RTA-CSHELL-ERROR-2', "getUserProfile");
+
+	}
 }
+
 
 function userActivation(uid) {
 	try {

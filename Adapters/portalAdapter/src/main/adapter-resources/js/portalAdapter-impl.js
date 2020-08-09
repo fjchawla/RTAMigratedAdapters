@@ -355,7 +355,7 @@ function getUserProfileV2(uid, appid) {
 		return handleError(message_en, message_ar, 'RTA-CSHELL-ERROR-2', "getUserProfileV2");
 	}
 }
-/*function getUserProfile(uid, appid) {
+function getUserProfile(uid, appid) {
 	try {
 
 		if (!uid || !appid) {
@@ -426,11 +426,11 @@ function getUserProfileV2(uid, appid) {
 		return handleError(message_en, message_ar, 'RTA-CSHELL-ERROR-2', "getUserProfile");
 
 	}
-}*/
+}
 
 
 
-function getUserProfile(uid, appid) {
+/*function getUserProfile(uid, appid) {
 	try {
 
 		if (!uid || !appid) {
@@ -512,7 +512,7 @@ function getUserProfile(uid, appid) {
 		return handleError(message_en, message_ar, 'RTA-CSHELL-ERROR-2', "getUserProfile");
 
 	}
-}
+}*/
 
 
 function userActivation(uid) {

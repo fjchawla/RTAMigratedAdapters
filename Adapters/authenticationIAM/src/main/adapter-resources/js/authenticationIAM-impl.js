@@ -160,7 +160,7 @@ function userProfileHandlerByUID(uid, appid) {
 				if (userProfile) {
 					// Collect portal user profile info
 					
-					if (userProfile.userId) user_id =uid   //Todo this for testing staging//userProfile.userId;
+					if (userProfile.userId) user_id =userProfile.userId;
 					if (userProfile.title && userProfile.title.titleEn) title_en = userProfile.title.titleEn;
 					if (userProfile.title && userProfile.title.titleAr) title_ar = userProfile.title.titleAr;
 					if (userProfile.firstName) first_name_en = userProfile.firstName;
